@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Drawing;
 
 namespace ShapesDrawing
@@ -12,12 +8,11 @@ namespace ShapesDrawing
     {
         public Color color;
         public int thickness;
-        public Rectangle(Point firstPoint, Point secondPoint, Color color, int thickness) : base(firstPoint, secondPoint) 
+        public Rectangle(Point firstPoint, Point secondPoint, Color color, int thickness, String name) : base(firstPoint, secondPoint, name)
         {
             this.color = color;
             this.thickness = thickness;
         }
-
         public virtual int Width
         {
             get
@@ -25,7 +20,6 @@ namespace ShapesDrawing
                 return Math.Abs(secondPoint.X - firstPoint.X);
             }
         }
-
         public int Height
         {
             get

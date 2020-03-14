@@ -45,3 +45,12 @@ C:\Users\asus\Desktop\OOP_3\ShapesDrawing\obj\Debug\ShapesDrawing.pdb
 C:\Users\asus\Desktop\OOP_3\ShapesDrawing\bin\Debug\ShapesDrawing.exe.config
 C:\Users\asus\Desktop\OOP_3\ShapesDrawing\bin\Debug\ShapesDrawing.exe
 C:\Users\asus\Desktop\OOP_3\ShapesDrawing\bin\Debug\ShapesDrawing.pdb
+C:\Users\asus\OOP_MyLabs\Lab3\ShapesDrawing\bin\Debug\ShapesDrawing.exe.config
+C:\Users\asus\OOP_MyLabs\Lab3\ShapesDrawing\bin\Debug\ShapesDrawing.exe
+C:\Users\asus\OOP_MyLabs\Lab3\ShapesDrawing\bin\Debug\ShapesDrawing.pdb
+C:\Users\asus\OOP_MyLabs\Lab3\ShapesDrawing\obj\Debug\ShapesDrawing.csprojAssemblyReference.cache
+C:\Users\asus\OOP_MyLabs\Lab3\ShapesDrawing\obj\Debug\ShapesDrawing.fmShapeDrawing.resources
+C:\Users\asus\OOP_MyLabs\Lab3\ShapesDrawing\obj\Debug\ShapesDrawing.Properties.Resources.resources
+C:\Users\asus\OOP_MyLabs\Lab3\ShapesDrawing\obj\Debug\ShapesDrawing.csproj.GenerateResource.cache
+C:\Users\asus\OOP_MyLabs\Lab3\ShapesDrawing\obj\Debug\ShapesDrawing.exe
+C:\Users\asus\OOP_MyLabs\Lab3\ShapesDrawing\obj\Debug\ShapesDrawing.pdb

@@ -1,27 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Drawing;
 
 namespace ShapesDrawing
 {
     [Serializable]
-    public abstract class Shape : IDraw
+    public abstract class Shape
     {
         public Point firstPoint;
         public Point secondPoint;
-        public Shape(Point firstPoint, Point secondPoint)
+        public String name;
+        public Shape(Point firstPoint, Point secondPoint, String name)
         {
             this.firstPoint = firstPoint;
             this.secondPoint = secondPoint;
+            this.name = name;
         }
-
         public abstract void Draw(Graphics graphic);
-    }
-    interface IDraw 
-    {
-        void Draw(Graphics graphic);
     }
 }

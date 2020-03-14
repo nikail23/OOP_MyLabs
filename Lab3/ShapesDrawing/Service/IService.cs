@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace ShapesDrawing
 {
@@ -14,7 +10,7 @@ namespace ShapesDrawing
         void Redo();
         void Undo();
         void LoadList();
-        List<Shape> GetList();
+        IList<Shape> GetList();
         void SaveList();
     }
 }

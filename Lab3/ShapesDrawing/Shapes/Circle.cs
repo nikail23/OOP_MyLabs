@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Drawing;
 
 namespace ShapesDrawing
@@ -10,8 +6,7 @@ namespace ShapesDrawing
     [Serializable]
     class Circle : Ellipse
     {
-        public Circle(Point firstPoint, Point secondPoint, Color color, int thickness) : base(firstPoint, secondPoint, color, thickness) {}
-
+        public Circle(Point firstPoint, Point secondPoint, Color color, int thickness, String name) : base(firstPoint, secondPoint, color, thickness, name)  { }
         public override int Width
         {
             get

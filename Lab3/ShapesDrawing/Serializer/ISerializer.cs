@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace ShapesDrawing
 {
-    interface ISerializer
+    public interface ISerializer
     {
-        void Serialize(List<Shape> shapes);
-        List<Shape> Deserialize();
+        void Serialize(IList<Shape> shapes);
+        IList<Shape> Deserialize();
     }
 }

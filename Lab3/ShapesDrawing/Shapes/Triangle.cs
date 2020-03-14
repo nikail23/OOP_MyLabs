@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Drawing;
 
 namespace ShapesDrawing
@@ -15,7 +11,7 @@ namespace ShapesDrawing
         Point[] points;
         [NonSerialized]
         Point firstTrianglePoint, secondTrianglePoint, thirdTrianglePoint;
-        public Triangle(Point firstPoint, Point secondPoint, Color color, int thickness) : base(firstPoint, secondPoint) 
+        public Triangle(Point firstPoint, Point secondPoint, Color color, int thickness, String name) : base(firstPoint, secondPoint, name)
         {
             this.color = color;
             this.thickness = thickness;
@@ -67,6 +63,6 @@ namespace ShapesDrawing
                 thirdTrianglePoint.Y = firstPoint.Y;
             }
             points = new Point[] { firstTrianglePoint, secondTrianglePoint, thirdTrianglePoint };
-        } 
+        }
     }
 }

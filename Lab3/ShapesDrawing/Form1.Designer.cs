@@ -36,19 +36,26 @@
             this.btnSquare = new System.Windows.Forms.Button();
             this.btnCircle = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.editButton = new System.Windows.Forms.Button();
             this.btnDeserializable = new System.Windows.Forms.Button();
             this.btnSerializable = new System.Windows.Forms.Button();
             this.btnRedo = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnUndo = new System.Windows.Forms.Button();
-            this.btnDemo = new System.Windows.Forms.Button();
             this.pbColor = new System.Windows.Forms.PictureBox();
             this.lblThickness = new System.Windows.Forms.Label();
             this.cbThickness = new System.Windows.Forms.ComboBox();
             this.ColorDialog = new System.Windows.Forms.ColorDialog();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.shapeParametersGrid = new System.Windows.Forms.DataGridView();
+            this.charColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valueColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.shapesListView = new System.Windows.Forms.ListView();
             ((System.ComponentModel.ISupportInitialize)(this.pbDrawingBoard)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbColor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shapeParametersGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // pbDrawingBoard
@@ -56,7 +63,7 @@
             this.pbDrawingBoard.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbDrawingBoard.Location = new System.Drawing.Point(128, 12);
             this.pbDrawingBoard.Name = "pbDrawingBoard";
-            this.pbDrawingBoard.Size = new System.Drawing.Size(1013, 602);
+            this.pbDrawingBoard.Size = new System.Drawing.Size(689, 585);
             this.pbDrawingBoard.TabIndex = 0;
             this.pbDrawingBoard.TabStop = false;
             this.pbDrawingBoard.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pbDrawingBoard_MouseDown);
@@ -131,12 +138,12 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.editButton);
             this.panel1.Controls.Add(this.btnDeserializable);
             this.panel1.Controls.Add(this.btnSerializable);
             this.panel1.Controls.Add(this.btnRedo);
             this.panel1.Controls.Add(this.btnClear);
             this.panel1.Controls.Add(this.btnUndo);
-            this.panel1.Controls.Add(this.btnDemo);
             this.panel1.Controls.Add(this.pbColor);
             this.panel1.Controls.Add(this.lblThickness);
             this.panel1.Controls.Add(this.cbThickness);
@@ -148,8 +155,17 @@
             this.panel1.Controls.Add(this.btnTriangle);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(110, 491);
+            this.panel1.Size = new System.Drawing.Size(110, 585);
             this.panel1.TabIndex = 7;
+            // 
+            // editButton
+            // 
+            this.editButton.Location = new System.Drawing.Point(2, 475);
+            this.editButton.Name = "editButton";
+            this.editButton.Size = new System.Drawing.Size(103, 23);
+            this.editButton.TabIndex = 14;
+            this.editButton.Text = "Редактировать";
+            this.editButton.UseVisualStyleBackColor = true;
             // 
             // btnDeserializable
             // 
@@ -201,16 +217,6 @@
             this.btnUndo.UseVisualStyleBackColor = true;
             this.btnUndo.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btnDemo
-            // 
-            this.btnDemo.Location = new System.Drawing.Point(2, 301);
-            this.btnDemo.Name = "btnDemo";
-            this.btnDemo.Size = new System.Drawing.Size(103, 23);
-            this.btnDemo.TabIndex = 11;
-            this.btnDemo.Text = "Лабораторная 1.";
-            this.btnDemo.UseVisualStyleBackColor = true;
-            this.btnDemo.Click += new System.EventHandler(this.btnDemo_Click);
-            // 
             // pbColor
             // 
             this.pbColor.BackColor = System.Drawing.Color.Black;
@@ -251,11 +257,75 @@
             this.cbThickness.Text = "1";
             this.cbThickness.TextChanged += new System.EventHandler(this.comboBox1_TextUpdate);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(882, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(77, 13);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Список фигур";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(882, 258);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(90, 13);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Характеристики";
+            // 
+            // shapeParametersGrid
+            // 
+            this.shapeParametersGrid.AllowUserToAddRows = false;
+            this.shapeParametersGrid.AllowUserToDeleteRows = false;
+            this.shapeParametersGrid.AllowUserToResizeColumns = false;
+            this.shapeParametersGrid.AllowUserToResizeRows = false;
+            this.shapeParametersGrid.ColumnHeadersHeight = 25;
+            this.shapeParametersGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.shapeParametersGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.charColumn,
+            this.valueColumn});
+            this.shapeParametersGrid.Location = new System.Drawing.Point(823, 284);
+            this.shapeParametersGrid.MultiSelect = false;
+            this.shapeParametersGrid.Name = "shapeParametersGrid";
+            this.shapeParametersGrid.RowHeadersVisible = false;
+            this.shapeParametersGrid.Size = new System.Drawing.Size(199, 313);
+            this.shapeParametersGrid.TabIndex = 11;
+            this.shapeParametersGrid.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.shapeParametersGrid_CellEndEdit);
+            // 
+            // charColumn
+            // 
+            this.charColumn.HeaderText = "Характеристика";
+            this.charColumn.Name = "charColumn";
+            this.charColumn.ReadOnly = true;
+            this.charColumn.Width = 125;
+            // 
+            // valueColumn
+            // 
+            this.valueColumn.HeaderText = "Значение";
+            this.valueColumn.Name = "valueColumn";
+            this.valueColumn.Width = 70;
+            // 
+            // shapesListView
+            // 
+            this.shapesListView.HideSelection = false;
+            this.shapesListView.Location = new System.Drawing.Point(823, 45);
+            this.shapesListView.Name = "shapesListView";
+            this.shapesListView.Size = new System.Drawing.Size(199, 199);
+            this.shapesListView.TabIndex = 12;
+            this.shapesListView.UseCompatibleStateImageBehavior = false;
+            this.shapesListView.SelectedIndexChanged += new System.EventHandler(this.shapesListView_SelectedIndexChanged);
+            // 
             // fmShapeDrawing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1028, 609);
+            this.Controls.Add(this.shapesListView);
+            this.Controls.Add(this.shapeParametersGrid);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pbDrawingBoard);
             this.DoubleBuffered = true;
@@ -267,7 +337,9 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbColor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shapeParametersGrid)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -285,12 +357,18 @@
         private System.Windows.Forms.ComboBox cbThickness;
         private System.Windows.Forms.ColorDialog ColorDialog;
         private System.Windows.Forms.PictureBox pbColor;
-        private System.Windows.Forms.Button btnDemo;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnUndo;
         private System.Windows.Forms.Button btnRedo;
         private System.Windows.Forms.Button btnSerializable;
         private System.Windows.Forms.Button btnDeserializable;
+        private System.Windows.Forms.Button editButton;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridView shapeParametersGrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn charColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valueColumn;
+        private System.Windows.Forms.ListView shapesListView;
     }
 }
 
