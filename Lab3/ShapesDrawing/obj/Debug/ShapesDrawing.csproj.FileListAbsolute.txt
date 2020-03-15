@@ -54,3 +54,12 @@ C:\Users\asus\OOP_MyLabs\Lab3\ShapesDrawing\obj\Debug\ShapesDrawing.Properties.R
 C:\Users\asus\OOP_MyLabs\Lab3\ShapesDrawing\obj\Debug\ShapesDrawing.csproj.GenerateResource.cache
 C:\Users\asus\OOP_MyLabs\Lab3\ShapesDrawing\obj\Debug\ShapesDrawing.exe
 C:\Users\asus\OOP_MyLabs\Lab3\ShapesDrawing\obj\Debug\ShapesDrawing.pdb
+D:\Study\2kurs\2sem\OOP_MyLabs\Lab3\ShapesDrawing\bin\Debug\ShapesDrawing.exe.config
+D:\Study\2kurs\2sem\OOP_MyLabs\Lab3\ShapesDrawing\bin\Debug\ShapesDrawing.exe
+D:\Study\2kurs\2sem\OOP_MyLabs\Lab3\ShapesDrawing\bin\Debug\ShapesDrawing.pdb
+D:\Study\2kurs\2sem\OOP_MyLabs\Lab3\ShapesDrawing\obj\Debug\ShapesDrawing.csprojAssemblyReference.cache
+D:\Study\2kurs\2sem\OOP_MyLabs\Lab3\ShapesDrawing\obj\Debug\ShapesDrawing.fmShapeDrawing.resources
+D:\Study\2kurs\2sem\OOP_MyLabs\Lab3\ShapesDrawing\obj\Debug\ShapesDrawing.Properties.Resources.resources
+D:\Study\2kurs\2sem\OOP_MyLabs\Lab3\ShapesDrawing\obj\Debug\ShapesDrawing.csproj.GenerateResource.cache
+D:\Study\2kurs\2sem\OOP_MyLabs\Lab3\ShapesDrawing\obj\Debug\ShapesDrawing.exe
+D:\Study\2kurs\2sem\OOP_MyLabs\Lab3\ShapesDrawing\obj\Debug\ShapesDrawing.pdb

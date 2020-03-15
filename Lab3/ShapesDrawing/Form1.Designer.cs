@@ -293,6 +293,7 @@
             this.shapeParametersGrid.Size = new System.Drawing.Size(199, 313);
             this.shapeParametersGrid.TabIndex = 11;
             this.shapeParametersGrid.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.shapeParametersGrid_CellEndEdit);
+            this.shapeParametersGrid.CellMouseUp += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.shapeParametersGrid_CellMouseUp);
             // 
             // charColumn
             // 

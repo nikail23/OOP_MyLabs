@@ -87,11 +87,30 @@ namespace ShapesDrawing
 
         private void shapesListView_SelectedIndexChanged(object sender, EventArgs e)
         {
-            shapesListManager.OpenShapeCharacteristics(shapeParametersGrid, shapesListView.SelectedIndices[0]);
+            if (shapesListView.SelectedIndices[0] > -1)
+                shapesListManager.OpenShapeCharacteristics(shapeParametersGrid, shapesListView.SelectedIndices[0]);
         }
 
         private void shapeParametersGrid_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
+            pbDrawingBoard.Refresh();
+            shapesListManager.EditShape(shapeParametersGrid);
+            shapesDrawer.DrawShapeList(shapesListManager.GetList());
+            shapesListManager.RefreshFormShapesList(shapesListView);
+        }
+
+        private void shapeParametersGrid_CellMouseUp(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            const int colorColumnIndex = 1;
+            const int colorRowIndex = 5;
+            if ((e.ColumnIndex == colorColumnIndex) &&(e.RowIndex == colorRowIndex))
+            {
+                DialogResult dialogResult = ColorDialog.ShowDialog();
+                if (dialogResult == DialogResult.OK)
+                {
+                    shapeParametersGrid[colorColumnIndex, colorRowIndex].Style.BackColor = ColorDialog.Color;
+                }
+            }
             pbDrawingBoard.Refresh();
             shapesListManager.EditShape(shapeParametersGrid);
             shapesDrawer.DrawShapeList(shapesListManager.GetList());
