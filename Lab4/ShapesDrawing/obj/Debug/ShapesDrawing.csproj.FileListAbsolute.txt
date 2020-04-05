@@ -1,0 +1,65 @@
+D:\Учёба\ООП\Лабораторная 1\ShapesDrawing\ShapesDrawing\bin\Debug\ShapesDrawing.exe.config
+D:\Учёба\ООП\Лабораторная 1\ShapesDrawing\ShapesDrawing\bin\Debug\ShapesDrawing.exe
+D:\Учёба\ООП\Лабораторная 1\ShapesDrawing\ShapesDrawing\bin\Debug\ShapesDrawing.pdb
+D:\Учёба\ООП\Лабораторная 1\ShapesDrawing\ShapesDrawing\obj\Debug\ShapesDrawing.csprojResolveAssemblyReference.cache
+D:\Учёба\ООП\Лабораторная 1\ShapesDrawing\ShapesDrawing\obj\Debug\ShapesDrawing.Properties.Resources.resources
+D:\Учёба\ООП\Лабораторная 1\ShapesDrawing\ShapesDrawing\obj\Debug\ShapesDrawing.csproj.GenerateResource.Cache
+D:\Учёба\ООП\Лабораторная 1\ShapesDrawing\ShapesDrawing\obj\Debug\ShapesDrawing.csproj.CoreCompileInputs.cache
+D:\Учёба\ООП\Лабораторная 1\ShapesDrawing\ShapesDrawing\obj\Debug\ShapesDrawing.exe
+D:\Учёба\ООП\Лабораторная 1\ShapesDrawing\ShapesDrawing\obj\Debug\ShapesDrawing.pdb
+D:\Учёба\ООП\Лабораторная 1\ShapesDrawing\ShapesDrawing\obj\Debug\ShapesDrawing.fmShapeDrawing.resources
+C:\Users\DELL-PC\Desktop\OneDrive\ООТПиСП\Лабораторная 1\ShapesDrawing\ShapesDrawing\bin\Debug\ShapesDrawing.exe.config
+C:\Users\DELL-PC\Desktop\OneDrive\ООТПиСП\Лабораторная 1\ShapesDrawing\ShapesDrawing\bin\Debug\ShapesDrawing.exe
+C:\Users\DELL-PC\Desktop\OneDrive\ООТПиСП\Лабораторная 1\ShapesDrawing\ShapesDrawing\bin\Debug\ShapesDrawing.pdb
+C:\Users\DELL-PC\Desktop\OneDrive\ООТПиСП\Лабораторная 1\ShapesDrawing\ShapesDrawing\obj\Debug\ShapesDrawing.csprojResolveAssemblyReference.cache
+C:\Users\DELL-PC\Desktop\OneDrive\ООТПиСП\Лабораторная 1\ShapesDrawing\ShapesDrawing\obj\Debug\ShapesDrawing.fmShapeDrawing.resources
+C:\Users\DELL-PC\Desktop\OneDrive\ООТПиСП\Лабораторная 1\ShapesDrawing\ShapesDrawing\obj\Debug\ShapesDrawing.Properties.Resources.resources
+C:\Users\DELL-PC\Desktop\OneDrive\ООТПиСП\Лабораторная 1\ShapesDrawing\ShapesDrawing\obj\Debug\ShapesDrawing.csproj.GenerateResource.Cache
+C:\Users\DELL-PC\Desktop\OneDrive\ООТПиСП\Лабораторная 1\ShapesDrawing\ShapesDrawing\obj\Debug\ShapesDrawing.csproj.CoreCompileInputs.cache
+C:\Users\DELL-PC\Desktop\OneDrive\ООТПиСП\Лабораторная 1\ShapesDrawing\ShapesDrawing\obj\Debug\ShapesDrawing.exe
+C:\Users\DELL-PC\Desktop\OneDrive\ООТПиСП\Лабораторная 1\ShapesDrawing\ShapesDrawing\obj\Debug\ShapesDrawing.pdb
+D:\Учеба\2kurs\2 сем\4sem\4sem\oop\ООТПиСП\Лабораторная 1\ShapesDrawing\ShapesDrawing\bin\Debug\ShapesDrawing.exe.config
+D:\Учеба\2kurs\2 сем\4sem\4sem\oop\ООТПиСП\Лабораторная 1\ShapesDrawing\ShapesDrawing\bin\Debug\ShapesDrawing.exe
+D:\Учеба\2kurs\2 сем\4sem\4sem\oop\ООТПиСП\Лабораторная 1\ShapesDrawing\ShapesDrawing\bin\Debug\ShapesDrawing.pdb
+D:\Учеба\2kurs\2 сем\4sem\4sem\oop\ООТПиСП\Лабораторная 1\ShapesDrawing\ShapesDrawing\obj\Debug\ShapesDrawing.csprojAssemblyReference.cache
+D:\Учеба\2kurs\2 сем\4sem\4sem\oop\ООТПиСП\Лабораторная 1\ShapesDrawing\ShapesDrawing\obj\Debug\ShapesDrawing.fmShapeDrawing.resources
+D:\Учеба\2kurs\2 сем\4sem\4sem\oop\ООТПиСП\Лабораторная 1\ShapesDrawing\ShapesDrawing\obj\Debug\ShapesDrawing.Properties.Resources.resources
+D:\Учеба\2kurs\2 сем\4sem\4sem\oop\ООТПиСП\Лабораторная 1\ShapesDrawing\ShapesDrawing\obj\Debug\ShapesDrawing.csproj.GenerateResource.cache
+D:\Учеба\2kurs\2 сем\4sem\4sem\oop\ООТПиСП\Лабораторная 1\ShapesDrawing\ShapesDrawing\obj\Debug\ShapesDrawing.exe
+D:\Учеба\2kurs\2 сем\4sem\4sem\oop\ООТПиСП\Лабораторная 1\ShapesDrawing\ShapesDrawing\obj\Debug\ShapesDrawing.pdb
+C:\Users\HP\Desktop\ShapesDrawing\ShapesDrawing\obj\Debug\ShapesDrawing.exe
+C:\Users\HP\Desktop\ShapesDrawing\ShapesDrawing\obj\Debug\ShapesDrawing.pdb
+C:\Users\HP\Desktop\ShapesDrawing\ShapesDrawing\bin\Debug\ShapesDrawing.exe.config
+C:\Users\HP\Desktop\ShapesDrawing\ShapesDrawing\bin\Debug\ShapesDrawing.exe
+C:\Users\HP\Desktop\ShapesDrawing\ShapesDrawing\bin\Debug\ShapesDrawing.pdb
+C:\Users\HP\Desktop\ShapesDrawing\ShapesDrawing\obj\Debug\ShapesDrawing.csprojAssemblyReference.cache
+C:\Users\HP\Desktop\ShapesDrawing\ShapesDrawing\obj\Debug\ShapesDrawing.fmShapeDrawing.resources
+C:\Users\HP\Desktop\ShapesDrawing\ShapesDrawing\obj\Debug\ShapesDrawing.Properties.Resources.resources
+C:\Users\HP\Desktop\ShapesDrawing\ShapesDrawing\obj\Debug\ShapesDrawing.csproj.GenerateResource.cache
+C:\Users\asus\Desktop\OOP_3\ShapesDrawing\obj\Debug\ShapesDrawing.csprojAssemblyReference.cache
+C:\Users\asus\Desktop\OOP_3\ShapesDrawing\obj\Debug\ShapesDrawing.fmShapeDrawing.resources
+C:\Users\asus\Desktop\OOP_3\ShapesDrawing\obj\Debug\ShapesDrawing.Properties.Resources.resources
+C:\Users\asus\Desktop\OOP_3\ShapesDrawing\obj\Debug\ShapesDrawing.csproj.GenerateResource.cache
+C:\Users\asus\Desktop\OOP_3\ShapesDrawing\obj\Debug\ShapesDrawing.exe
+C:\Users\asus\Desktop\OOP_3\ShapesDrawing\obj\Debug\ShapesDrawing.pdb
+C:\Users\asus\Desktop\OOP_3\ShapesDrawing\bin\Debug\ShapesDrawing.exe.config
+C:\Users\asus\Desktop\OOP_3\ShapesDrawing\bin\Debug\ShapesDrawing.exe
+C:\Users\asus\Desktop\OOP_3\ShapesDrawing\bin\Debug\ShapesDrawing.pdb
+C:\Users\asus\OOP_MyLabs\Lab3\ShapesDrawing\bin\Debug\ShapesDrawing.exe.config
+C:\Users\asus\OOP_MyLabs\Lab3\ShapesDrawing\bin\Debug\ShapesDrawing.exe
+C:\Users\asus\OOP_MyLabs\Lab3\ShapesDrawing\bin\Debug\ShapesDrawing.pdb
+C:\Users\asus\OOP_MyLabs\Lab3\ShapesDrawing\obj\Debug\ShapesDrawing.csprojAssemblyReference.cache
+C:\Users\asus\OOP_MyLabs\Lab3\ShapesDrawing\obj\Debug\ShapesDrawing.fmShapeDrawing.resources
+C:\Users\asus\OOP_MyLabs\Lab3\ShapesDrawing\obj\Debug\ShapesDrawing.Properties.Resources.resources
+C:\Users\asus\OOP_MyLabs\Lab3\ShapesDrawing\obj\Debug\ShapesDrawing.csproj.GenerateResource.cache
+C:\Users\asus\OOP_MyLabs\Lab3\ShapesDrawing\obj\Debug\ShapesDrawing.exe
+C:\Users\asus\OOP_MyLabs\Lab3\ShapesDrawing\obj\Debug\ShapesDrawing.pdb
+D:\Study\2kurs\2sem\OOP_MyLabs\Lab3\ShapesDrawing\bin\Debug\ShapesDrawing.exe.config
+D:\Study\2kurs\2sem\OOP_MyLabs\Lab3\ShapesDrawing\bin\Debug\ShapesDrawing.exe
+D:\Study\2kurs\2sem\OOP_MyLabs\Lab3\ShapesDrawing\bin\Debug\ShapesDrawing.pdb
+D:\Study\2kurs\2sem\OOP_MyLabs\Lab3\ShapesDrawing\obj\Debug\ShapesDrawing.csprojAssemblyReference.cache
+D:\Study\2kurs\2sem\OOP_MyLabs\Lab3\ShapesDrawing\obj\Debug\ShapesDrawing.fmShapeDrawing.resources
+D:\Study\2kurs\2sem\OOP_MyLabs\Lab3\ShapesDrawing\obj\Debug\ShapesDrawing.Properties.Resources.resources
+D:\Study\2kurs\2sem\OOP_MyLabs\Lab3\ShapesDrawing\obj\Debug\ShapesDrawing.csproj.GenerateResource.cache
+D:\Study\2kurs\2sem\OOP_MyLabs\Lab3\ShapesDrawing\obj\Debug\ShapesDrawing.exe
+D:\Study\2kurs\2sem\OOP_MyLabs\Lab3\ShapesDrawing\obj\Debug\ShapesDrawing.pdb
