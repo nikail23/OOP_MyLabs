@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyShapes;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization;
@@ -31,7 +32,7 @@ namespace ShapesDrawing
                     IList<Shape> shapes = (List<Shape>)formatter.Deserialize(fileStream);
                     return shapes;
                 }
-                catch (SerializationException ex)
+                catch (SerializationException)
                 {
                     MessageBox.Show("Попытка десериализации пустого потока.");
                     return null;

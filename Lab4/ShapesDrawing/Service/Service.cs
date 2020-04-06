@@ -1,6 +1,5 @@
-﻿using System.Collections.Generic;
-using System.Drawing;
-using System.Text.RegularExpressions;
+﻿using MyShapes;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace ShapesDrawing
@@ -67,75 +66,26 @@ namespace ShapesDrawing
                 shapesListBox.Items.Add(listItem);
             }
         }
-        public void OpenShapeCharacteristics(DataGridView grid, int number)
+        public void ShowShapeParameters(DataGridView parametersGrid, int shapeIndex)
         {
-            if (number >= 0)
-            {
-                grid.Rows.Clear();
-                editableShape = shapes[number];
-                grid.Rows.Add("Тип:", editableShape.name);
-                grid.Rows.Add("X1:", editableShape.firstPoint.X);
-                grid.Rows.Add("Y1:", editableShape.firstPoint.Y);
-                grid.Rows.Add("X2:", editableShape.secondPoint.X);
-                grid.Rows.Add("Y2:", editableShape.secondPoint.Y);
-                if ((editableShape is Rectangle)||(editableShape is Square)||(editableShape is Circle)||(editableShape is Ellipse))
-                {
-                    Rectangle rectangle = (Rectangle)editableShape;
-                    grid.Rows.Add("Цвет:", "");
-                    grid[1, 5].Style.BackColor = rectangle.color;
-                    grid.Rows.Add("Толщина:", rectangle.thickness);
-                }
-                if (editableShape is Line)
-                {
-                    Line line = (Line)editableShape;
-                    grid.Rows.Add("Цвет:", "");
-                    grid[1, 5].Style.BackColor = line.color;
-                    grid.Rows.Add("Толщина:", line.thickness);
-                }
-                if (editableShape is Triangle)
-                {
-                    Triangle triangle = (Triangle)editableShape;
-                    grid.Rows.Add("Цвет:", "");
-                    grid[1, 5].Style.BackColor = triangle.color;
-                    grid.Rows.Add("Толщина:", triangle.thickness);
-                }
-            }          
+            editableShape = GetShapeByIndex(shapeIndex);
+            editableShape.ShowShapeParameters(parametersGrid);
         }
-        public void EditShape(DataGridView grid)
+
+        public void ConfirmShapeParametersChange(DataGridView parametersGrid)
         {
-            const int propertyColumnIndex = 1;
-            const int nameIndex = 0;
-            const int x1Index = 1;
-            const int y1Index = 2;
-            const int x2Index = 3;
-            const int y2Index = 4;
-            const int colorIndex = 5;
-            const int thicknessIndex = 6;
-            editableShape.name = grid[propertyColumnIndex, nameIndex].Value.ToString();
-            editableShape.firstPoint.X = int.Parse(grid[propertyColumnIndex, x1Index].Value.ToString());
-            editableShape.firstPoint.Y = int.Parse(grid[propertyColumnIndex, y1Index].Value.ToString());
-            editableShape.secondPoint.X = int.Parse(grid[propertyColumnIndex, x2Index].Value.ToString());
-            editableShape.secondPoint.Y = int.Parse(grid[propertyColumnIndex, y2Index].Value.ToString());
-            if ((editableShape is Rectangle) || (editableShape is Square) || (editableShape is Circle) || (editableShape is Ellipse))
+            editableShape.ConfirmShapeParametersChange(parametersGrid);
+        }
+
+        private Shape GetShapeByIndex(int shapeIndex)
+        {
+            try
             {
-                Rectangle rectangle = (Rectangle)editableShape;
-                rectangle.color = grid[propertyColumnIndex, colorIndex].Style.BackColor;
-                rectangle.thickness = int.Parse(grid[propertyColumnIndex, thicknessIndex].Value.ToString());
-                editableShape = rectangle;
+                return shapes[shapeIndex];
             }
-            if (editableShape is Line)
+            catch
             {
-                Line line = (Line)editableShape;
-                line.color = grid[propertyColumnIndex, colorIndex].Style.BackColor;
-                line.thickness = int.Parse(grid[propertyColumnIndex, thicknessIndex].Value.ToString());
-                editableShape = line;
-            }
-            if (editableShape is Triangle)
-            {
-                Triangle triangle = (Triangle)editableShape;
-                triangle.color = grid[propertyColumnIndex, colorIndex].Style.BackColor;
-                triangle.thickness = int.Parse(grid[propertyColumnIndex, thicknessIndex].Value.ToString());
-                editableShape = triangle;
+                return null;
             }
         }
     }

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using MyShapes;
+using System.Collections.Generic;
 
 namespace ShapesDrawing
 {

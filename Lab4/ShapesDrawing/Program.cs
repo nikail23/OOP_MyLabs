@@ -13,7 +13,7 @@ namespace ShapesDrawing
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new fmShapeDrawing());
+            Application.Run(new ShapeDrawingForm());
         }
     }
 }

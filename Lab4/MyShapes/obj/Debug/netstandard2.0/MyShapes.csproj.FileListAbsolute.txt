@@ -1,0 +1,15 @@
+C:\Users\asus\Desktop\OOP_MyLabs\Lab4\MyShapes\bin\Debug\netstandard2.0\MyShapes.deps.json
+C:\Users\asus\Desktop\OOP_MyLabs\Lab4\MyShapes\bin\Debug\netstandard2.0\MyShapes.dll
+C:\Users\asus\Desktop\OOP_MyLabs\Lab4\MyShapes\obj\Debug\netstandard2.0\MyShapes.csprojAssemblyReference.cache
+C:\Users\asus\Desktop\OOP_MyLabs\Lab4\MyShapes\obj\Debug\netstandard2.0\MyShapes.AssemblyInfoInputs.cache
+C:\Users\asus\Desktop\OOP_MyLabs\Lab4\MyShapes\obj\Debug\netstandard2.0\MyShapes.AssemblyInfo.cs
+C:\Users\asus\Desktop\OOP_MyLabs\Lab4\MyShapes\bin\Debug\netstandard2.0\MyShapes.pdb
+C:\Users\asus\Desktop\OOP_MyLabs\Lab4\MyShapes\bin\Debug\netstandard2.0\System.Windows.Forms.dll
+C:\Users\asus\Desktop\OOP_MyLabs\Lab4\MyShapes\bin\Debug\netstandard2.0\System.Security.dll
+C:\Users\asus\Desktop\OOP_MyLabs\Lab4\MyShapes\bin\Debug\netstandard2.0\System.Configuration.dll
+C:\Users\asus\Desktop\OOP_MyLabs\Lab4\MyShapes\bin\Debug\netstandard2.0\Accessibility.dll
+C:\Users\asus\Desktop\OOP_MyLabs\Lab4\MyShapes\bin\Debug\netstandard2.0\System.Deployment.dll
+C:\Users\asus\Desktop\OOP_MyLabs\Lab4\MyShapes\bin\Debug\netstandard2.0\System.Runtime.Serialization.Formatters.Soap.dll
+C:\Users\asus\Desktop\OOP_MyLabs\Lab4\MyShapes\obj\Debug\netstandard2.0\MyShapes.csproj.CopyComplete
+C:\Users\asus\Desktop\OOP_MyLabs\Lab4\MyShapes\obj\Debug\netstandard2.0\MyShapes.dll
+C:\Users\asus\Desktop\OOP_MyLabs\Lab4\MyShapes\obj\Debug\netstandard2.0\MyShapes.pdb

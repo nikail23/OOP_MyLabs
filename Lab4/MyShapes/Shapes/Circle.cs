@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Drawing;
 
-namespace ShapesDrawing
+namespace MyShapes
 {
     [Serializable]
-    class Circle : Ellipse
+    public class Circle : Ellipse
     {
         public Circle(Point firstPoint, Point secondPoint, Color color, int thickness, String name) : base(firstPoint, secondPoint, color, thickness, name)  { }
-        public override int Width
+        
+        protected override int Width
         {
             get
             {
@@ -18,7 +19,7 @@ namespace ShapesDrawing
         public override void Draw(Graphics graphic)
         {
             Pen pen = new Pen(color, thickness);
-            graphic.DrawEllipse(pen, topLeft.X, topLeft.Y, Width, Width);
+            graphic.DrawEllipse(pen, TopLeftPoint.X, TopLeftPoint.Y, Width, Width);
         }
     }
 }
