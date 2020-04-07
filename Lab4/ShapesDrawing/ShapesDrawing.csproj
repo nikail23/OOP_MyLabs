@@ -65,7 +65,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Plugins\IPlugin.cs" />
     <Compile Include="Plugins\IPluginScanner.cs" />
+    <Compile Include="Plugins\PluginScanner.cs" />
     <Compile Include="Serializer\BinarySerializer.cs" />
     <Compile Include="Service\IService.cs" />
     <Compile Include="Service\Service.cs" />

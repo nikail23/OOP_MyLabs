@@ -8,6 +8,12 @@ namespace ShapesDrawing
 {
     class Drawer : IDrawer
     {
+        public const int CircleTag = 1;
+        public const int SquareTag = 2;
+        public const int RectangleTag = 3;
+        public const int TriangleTag = 4;
+        public const int EllipseTag = 5;
+        public const int LineTag = 6;
         private const int DefaultThickness = 1;
         private const int DefaultShapeTag = 1;
         private static readonly Color DefaultColor = Color.Black;
@@ -86,12 +92,13 @@ namespace ShapesDrawing
         }
         private void AddShapesToDictionary()
         {
-            shapesDictionary.Add(1, new Circle(StartPoint, FinishPoint, Color, Thickness, "Circle"));
-            shapesDictionary.Add(2, new Square(StartPoint, FinishPoint, Color, Thickness, "Square"));
-            shapesDictionary.Add(3, new Rectangle(StartPoint, FinishPoint, Color, Thickness, "Rectangle"));
-            shapesDictionary.Add(4, new Triangle(StartPoint, FinishPoint, Color, Thickness, "Triangle"));
-            shapesDictionary.Add(5, new Ellipse(StartPoint, FinishPoint, Color, Thickness, "Ellipse"));
-            shapesDictionary.Add(6, new Line(StartPoint, FinishPoint, Color, Thickness, "Line"));
+            
+            shapesDictionary.Add(CircleTag, new Circle(StartPoint, FinishPoint, Color, Thickness, "Circle"));
+            shapesDictionary.Add(SquareTag, new Square(StartPoint, FinishPoint, Color, Thickness, "Square"));
+            shapesDictionary.Add(RectangleTag, new Rectangle(StartPoint, FinishPoint, Color, Thickness, "Rectangle"));
+            shapesDictionary.Add(TriangleTag, new Triangle(StartPoint, FinishPoint, Color, Thickness, "Triangle"));
+            shapesDictionary.Add(EllipseTag, new Ellipse(StartPoint, FinishPoint, Color, Thickness, "Ellipse"));
+            shapesDictionary.Add(LineTag, new Line(StartPoint, FinishPoint, Color, Thickness, "Line"));
         }
         public Shape CreateFigure()
         {

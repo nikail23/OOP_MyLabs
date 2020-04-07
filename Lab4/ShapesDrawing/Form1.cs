@@ -2,17 +2,21 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
 namespace ShapesDrawing
 {
     public partial class ShapeDrawingForm : Form
     {
+        private static readonly string projectPath = Directory.GetCurrentDirectory();
         IDrawer shapesDrawer;
         IService shapesListManager;
+        IPluginScanner pluginScanner;
         public ShapeDrawingForm()
         {
             shapesListManager = new Service(new BinarySerializer(), new List<Shape>(), new List<Shape>());
+            pluginScanner = new PluginScanner();
             InitializeComponent();
         }
         private void PbDrawingBoard_MouseUp(object sender, MouseEventArgs e)
@@ -20,7 +24,7 @@ namespace ShapesDrawing
             shapesDrawer.FinishPoint = new Point(e.X, e.Y);
             shapesListManager.Add(shapesDrawer.CreateFigure());
             shapesDrawer.DrawShapeList(shapesListManager.GetList());
-            shapesListManager.RefreshFormShapesList(shapesListView);
+            shapesListManager.RefreshFormShapesList(CurrentShapesListBox);
         }
         private void PbDrawingBoard_MouseDown(object sender, MouseEventArgs e)
         {
@@ -29,7 +33,8 @@ namespace ShapesDrawing
         private void FmShapeDrawing_Load(object sender, EventArgs e)
         {
             shapesDrawer = new Drawer(pbDrawingBoard.CreateGraphics(), new Dictionary<int, Shape>());
-            // пишем класс поисковика плагинов
+            string[] pluginsList = pluginScanner.GetPluginsList(projectPath + "\\Plugins");
+            
         }
         private void ComboBox1_TextUpdate(object sender, EventArgs e)
         {
@@ -55,21 +60,21 @@ namespace ShapesDrawing
             ClearDrawingBoard();
             shapesListManager.ClearShapesList();
             shapesListManager.ClearDeletedShapesList();
-            shapesListManager.RefreshFormShapesList(shapesListView);
+            shapesListManager.RefreshFormShapesList(CurrentShapesListBox);
         }
         private void Button1_Click(object sender, EventArgs e)
         {
             pbDrawingBoard.Refresh();
             shapesListManager.Undo();
             shapesDrawer.DrawShapeList(shapesListManager.GetList());
-            shapesListManager.RefreshFormShapesList(shapesListView);
+            shapesListManager.RefreshFormShapesList(CurrentShapesListBox);
         }
         private void Button2_Click(object sender, EventArgs e)
         {
             pbDrawingBoard.Refresh();
             shapesListManager.Redo();
             shapesDrawer.DrawShapeList(shapesListManager.GetList());
-            shapesListManager.RefreshFormShapesList(shapesListView);
+            shapesListManager.RefreshFormShapesList(CurrentShapesListBox);
         }
         private void BtnSerializable_Click(object sender, EventArgs e)
         {
@@ -80,13 +85,7 @@ namespace ShapesDrawing
             pbDrawingBoard.Refresh();
             shapesListManager.LoadList();
             shapesDrawer.DrawShapeList(shapesListManager.GetList());
-            shapesListManager.RefreshFormShapesList(shapesListView);
-        }
-
-        private void ShapesListView_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (shapesListView.SelectedIndices[0] > -1)
-                shapesListManager.ShowShapeParameters(shapeParametersGrid, shapesListView.SelectedIndices[0]);
+            shapesListManager.RefreshFormShapesList(CurrentShapesListBox);
         }
 
         private void ShapeParametersGrid_CellEndEdit(object sender, DataGridViewCellEventArgs e)
@@ -94,7 +93,7 @@ namespace ShapesDrawing
             pbDrawingBoard.Refresh();
             shapesListManager.ConfirmShapeParametersChange(shapeParametersGrid);
             shapesDrawer.DrawShapeList(shapesListManager.GetList());
-            shapesListManager.RefreshFormShapesList(shapesListView);
+            shapesListManager.RefreshFormShapesList(CurrentShapesListBox);
         }
 
         private void ShapeParametersGrid_CellMouseUp(object sender, DataGridViewCellMouseEventArgs e)
@@ -112,12 +111,18 @@ namespace ShapesDrawing
             pbDrawingBoard.Refresh();
             shapesListManager.ConfirmShapeParametersChange(shapeParametersGrid);
             shapesDrawer.DrawShapeList(shapesListManager.GetList());
-            shapesListManager.RefreshFormShapesList(shapesListView);
+            shapesListManager.RefreshFormShapesList(CurrentShapesListBox);
         }
 
         private void ShapesTypesListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            shapesDrawer.ShapeTag = ShapesTypesListBox.SelectedIndex;
+            shapesDrawer.ShapeTag = ShapesTypesListBox.SelectedIndex + 1;
+        }
+
+        private void CurrentShapesListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (CurrentShapesListBox.SelectedIndex > -1)
+                shapesListManager.ShowShapeParameters(shapeParametersGrid, CurrentShapesListBox.SelectedIndex);
         }
     }
 }

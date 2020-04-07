@@ -14,7 +14,7 @@ namespace ShapesDrawing
         void LoadList();
         IList<Shape> GetList();
         void SaveList();
-        void RefreshFormShapesList(ListView shapesListBox);
+        void RefreshFormShapesList(ListBox shapesListBox);
         void ShowShapeParameters(DataGridView parametersGrid, int shapeIndex);
         void ConfirmShapeParametersChange(DataGridView parametersGrid);
     }

@@ -30,6 +30,7 @@
         {
             this.pbDrawingBoard = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ShapesTypesListBox = new System.Windows.Forms.ListBox();
             this.editButton = new System.Windows.Forms.Button();
             this.btnDeserializable = new System.Windows.Forms.Button();
             this.btnSerializable = new System.Windows.Forms.Button();
@@ -45,8 +46,7 @@
             this.shapeParametersGrid = new System.Windows.Forms.DataGridView();
             this.charColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.valueColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.shapesListView = new System.Windows.Forms.ListView();
-            this.ShapesTypesListBox = new System.Windows.Forms.ListBox();
+            this.CurrentShapesListBox = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbDrawingBoard)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbColor)).BeginInit();
@@ -81,6 +81,22 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(110, 585);
             this.panel1.TabIndex = 7;
+            // 
+            // ShapesTypesListBox
+            // 
+            this.ShapesTypesListBox.FormattingEnabled = true;
+            this.ShapesTypesListBox.Items.AddRange(new object[] {
+            "Circle",
+            "Square",
+            "Rectangle",
+            "Triangle",
+            "Ellipse",
+            "Line"});
+            this.ShapesTypesListBox.Location = new System.Drawing.Point(2, 3);
+            this.ShapesTypesListBox.Name = "ShapesTypesListBox";
+            this.ShapesTypesListBox.Size = new System.Drawing.Size(103, 173);
+            this.ShapesTypesListBox.TabIndex = 15;
+            this.ShapesTypesListBox.SelectedIndexChanged += new System.EventHandler(this.ShapesTypesListBox_SelectedIndexChanged);
             // 
             // editButton
             // 
@@ -232,31 +248,21 @@
             this.valueColumn.Name = "valueColumn";
             this.valueColumn.Width = 70;
             // 
-            // shapesListView
+            // CurrentShapesListBox
             // 
-            this.shapesListView.HideSelection = false;
-            this.shapesListView.Location = new System.Drawing.Point(823, 45);
-            this.shapesListView.Name = "shapesListView";
-            this.shapesListView.Size = new System.Drawing.Size(199, 199);
-            this.shapesListView.TabIndex = 12;
-            this.shapesListView.UseCompatibleStateImageBehavior = false;
-            this.shapesListView.SelectedIndexChanged += new System.EventHandler(this.ShapesListView_SelectedIndexChanged);
-            // 
-            // ShapesTypesListBox
-            // 
-            this.ShapesTypesListBox.FormattingEnabled = true;
-            this.ShapesTypesListBox.Location = new System.Drawing.Point(2, 3);
-            this.ShapesTypesListBox.Name = "ShapesTypesListBox";
-            this.ShapesTypesListBox.Size = new System.Drawing.Size(103, 173);
-            this.ShapesTypesListBox.TabIndex = 15;
-            this.ShapesTypesListBox.SelectedIndexChanged += new System.EventHandler(this.ShapesTypesListBox_SelectedIndexChanged);
+            this.CurrentShapesListBox.FormattingEnabled = true;
+            this.CurrentShapesListBox.Location = new System.Drawing.Point(823, 28);
+            this.CurrentShapesListBox.Name = "CurrentShapesListBox";
+            this.CurrentShapesListBox.Size = new System.Drawing.Size(199, 225);
+            this.CurrentShapesListBox.TabIndex = 12;
+            this.CurrentShapesListBox.SelectedIndexChanged += new System.EventHandler(this.CurrentShapesListBox_SelectedIndexChanged);
             // 
             // ShapeDrawingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1028, 609);
-            this.Controls.Add(this.shapesListView);
+            this.Controls.Add(this.CurrentShapesListBox);
             this.Controls.Add(this.shapeParametersGrid);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -296,8 +302,8 @@
         private System.Windows.Forms.DataGridView shapeParametersGrid;
         private System.Windows.Forms.DataGridViewTextBoxColumn charColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn valueColumn;
-        private System.Windows.Forms.ListView shapesListView;
         private System.Windows.Forms.ListBox ShapesTypesListBox;
+        private System.Windows.Forms.ListBox CurrentShapesListBox;
     }
 }
 

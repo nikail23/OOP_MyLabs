@@ -56,14 +56,12 @@ namespace ShapesDrawing
         {
             serializer.Serialize(shapes);
         }
-        public void RefreshFormShapesList(ListView shapesListBox)
+        public void RefreshFormShapesList(ListBox shapesListBox)
         {
-            shapesListBox.Clear();
+            shapesListBox.Items.Clear();
             foreach (Shape shape in shapes)
             {
-                var listItem = new ListViewItem();
-                listItem.Text = shape.name;
-                shapesListBox.Items.Add(listItem);
+                shapesListBox.Items.Add(shape.name);
             }
         }
         public void ShowShapeParameters(DataGridView parametersGrid, int shapeIndex)
