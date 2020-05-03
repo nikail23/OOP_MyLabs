@@ -14,3 +14,4 @@ C:\Users\asus\Desktop\OOP_MyLabs\Cross\Cross\obj\Debug\netstandard2.0\Cross.cspr
 C:\Users\asus\Desktop\OOP_MyLabs\Cross\Cross\bin\Debug\netstandard2.0\Cross.pdb
 C:\Users\asus\Desktop\OOP_MyLabs\Cross\Cross\obj\Debug\netstandard2.0\Cross.dll
 C:\Users\asus\Desktop\OOP_MyLabs\Cross\Cross\obj\Debug\netstandard2.0\Cross.pdb
+C:\Users\asus\Desktop\OOP_MyLabs\Cross\Cross\obj\Debug\netstandard2.0\Cross.csprojAssemblyReference.cache

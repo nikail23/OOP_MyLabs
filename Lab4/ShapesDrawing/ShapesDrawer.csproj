@@ -51,7 +51,7 @@
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>key.pfx</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="PresentationFramework" />
@@ -76,22 +76,22 @@
     <Compile Include="Plugins\Plugin.cs" />
     <Compile Include="Plugins\PluginScanner.cs" />
     <Compile Include="Plugins\PluginsManager.cs" />
-    <Compile Include="Serializer\ShapeXmlSerializer.cs" />
-    <Compile Include="Service\IService.cs" />
-    <Compile Include="Service\Service.cs" />
+    <Compile Include="Serializer\ShapeListXmlSerializer.cs" />
+    <Compile Include="Service\IShapesListManager.cs" />
+    <Compile Include="Service\ShapeListManager.cs" />
     <Compile Include="Drawer\Drawer.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="ShapeDrawingForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="ShapeDrawingForm.Designer.cs">
+      <DependentUpon>ShapeDrawingForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Serializer\ISerializer.cs" />
+    <Compile Include="Serializer\IShapeListSerializer.cs" />
     <Compile Include="Drawer\IDrawer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="ShapeDrawingForm.resx">
+      <DependentUpon>ShapeDrawingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -103,7 +103,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="key.pfx" />
+    <None Include="key.snk" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -12,4 +12,3 @@ C:\Users\asus\Desktop\OOP_MyLabs\Lab4\MyShapes\bin\Debug\netstandard2.0\System.R
 C:\Users\asus\Desktop\OOP_MyLabs\Lab4\MyShapes\obj\Debug\netstandard2.0\MyShapes.csproj.CopyComplete
 C:\Users\asus\Desktop\OOP_MyLabs\Lab4\MyShapes\obj\Debug\netstandard2.0\MyShapes.dll
 C:\Users\asus\Desktop\OOP_MyLabs\Lab4\MyShapes\obj\Debug\netstandard2.0\MyShapes.pdb
-C:\Users\asus\Desktop\OOP_MyLabs\Lab4\MyShapes\obj\Debug\netstandard2.0\MyShapes.csprojAssemblyReference.cache

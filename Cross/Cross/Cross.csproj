@@ -6,7 +6,8 @@
     <OutputType>Library</OutputType>
     <StartupObject />
     <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>key.pfx</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>false</DelaySign>
   </PropertyGroup>
 
   <ItemGroup>

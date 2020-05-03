@@ -1,13 +1,26 @@
 <?xml version="1.0"?>
 <ArrayOfShape xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Shape xsi:type="Cross">
+  <Shape xsi:type="Circle">
     <firstPoint>
-      <X>99</X>
-      <Y>72</Y>
+      <X>0</X>
+      <Y>0</Y>
     </firstPoint>
     <secondPoint>
-      <X>328</X>
-      <Y>235</Y>
+      <X>91</X>
+      <Y>151</Y>
+    </secondPoint>
+    <color>-16777216</color>
+    <thickness>1</thickness>
+    <name>Circle</name>
+  </Shape>
+  <Shape xsi:type="Cross">
+    <firstPoint>
+      <X>182</X>
+      <Y>124</Y>
+    </firstPoint>
+    <secondPoint>
+      <X>421</X>
+      <Y>249</Y>
     </secondPoint>
     <color>-16777216</color>
     <thickness>1</thickness>
@@ -15,12 +28,12 @@
   </Shape>
   <Shape xsi:type="Cross">
     <firstPoint>
-      <X>454</X>
-      <Y>170</Y>
+      <X>136</X>
+      <Y>330</Y>
     </firstPoint>
     <secondPoint>
-      <X>614</X>
-      <Y>335</Y>
+      <X>336</X>
+      <Y>427</Y>
     </secondPoint>
     <color>-16777216</color>
     <thickness>1</thickness>
@@ -28,28 +41,41 @@
   </Shape>
   <Shape xsi:type="Cross">
     <firstPoint>
-      <X>165</X>
-      <Y>332</Y>
+      <X>472</X>
+      <Y>310</Y>
     </firstPoint>
     <secondPoint>
-      <X>388</X>
-      <Y>461</Y>
+      <X>611</X>
+      <Y>411</Y>
     </secondPoint>
     <color>-16777216</color>
     <thickness>1</thickness>
     <name>Cross</name>
   </Shape>
-  <Shape xsi:type="Ellipse">
+  <Shape xsi:type="Cross">
     <firstPoint>
-      <X>46</X>
-      <Y>132</Y>
+      <X>458</X>
+      <Y>49</Y>
     </firstPoint>
     <secondPoint>
-      <X>377</X>
-      <Y>327</Y>
+      <X>564</X>
+      <Y>148</Y>
     </secondPoint>
     <color>-16777216</color>
     <thickness>1</thickness>
-    <name>Ellipse</name>
+    <name>Cross</name>
+  </Shape>
+  <Shape xsi:type="Cross">
+    <firstPoint>
+      <X>233</X>
+      <Y>23</Y>
+    </firstPoint>
+    <secondPoint>
+      <X>355</X>
+      <Y>75</Y>
+    </secondPoint>
+    <color>-16777216</color>
+    <thickness>1</thickness>
+    <name>Cross</name>
   </Shape>
 </ArrayOfShape>

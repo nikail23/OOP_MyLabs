@@ -2,18 +2,35 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 
 namespace ShapesDrawing
 {
 	public class PluginScanner : IPluginScanner
 	{
+	     private bool CheckPluginSignature(Assembly pluginAssembly)
+		 {
+		     var currentAssemblyName = Assembly.GetExecutingAssembly().GetName();
+			 var pluginAssemblyName = pluginAssembly.GetName();
+			 if (currentAssemblyName.GetPublicKeyToken().SequenceEqual(pluginAssemblyName.GetPublicKeyToken()))
+			 {
+				 return true;
+			 }
+			 return false;
+		 }
+
 		public Assembly GetAssembly(string pluginPath, ref string stringError)
 		{
 			try
 			{
 				var assembly = Assembly.LoadFile(pluginPath);
-				return assembly;
+				if (CheckPluginSignature(assembly))
+				{
+					return assembly;
+				}
+				stringError = "Цифровая подпись плагина - неверна!";
+				return null;
 			}
 			catch (FileNotFoundException)
 			{

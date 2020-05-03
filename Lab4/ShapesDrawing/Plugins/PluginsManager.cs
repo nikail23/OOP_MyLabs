@@ -2,7 +2,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -37,6 +39,7 @@ namespace ShapesDrawing
                 listBox.Items.Add(type.Name);
             }
         }
+
         public void AddPlugin(string pluginPath, ListBox listBox)
         {
             var errorString = "";

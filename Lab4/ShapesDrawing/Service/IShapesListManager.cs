@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace ShapesDrawing
 {
-    public interface IService
+    public interface IShapesListManager
     {
         void ClearShapesList();
         void ClearDeletedShapesList();

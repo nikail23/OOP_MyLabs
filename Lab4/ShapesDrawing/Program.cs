@@ -17,8 +17,8 @@ namespace ShapesDrawing
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(
                 new ShapeDrawingForm(
-                    new Service(
-                        new ShapeXmlSerializer(),
+                    new ShapeListManager(
+                        new ShapeListXmlSerializer(),
                         new List<Shape>(),
                         new List<Shape>()
                     ),

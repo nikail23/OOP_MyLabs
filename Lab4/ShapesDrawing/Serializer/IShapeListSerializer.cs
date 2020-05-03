@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace ShapesDrawing
 {
-    public interface ISerializer
+    public interface IShapeListSerializer
     {
         void Serialize(IList<Shape> shapes, Type[] types);
         IList<Shape> Deserialize(Type[] types);

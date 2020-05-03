@@ -22,61 +22,13 @@ namespace ShapesDrawing
 
         private Graphics graphic;
         private IDictionary<int, Shape> shapesDictionary;
-        private int thickness;
-        private Color color;
-        private int shapeTag;
-        private List<Plugin> plugins; 
+        private List<Plugin> plugins;
 
-        private Point finishPoint;
         public Point StartPoint { get; set; }
-        public Point FinishPoint
-        {
-            get
-            {
-                return finishPoint;
-            }
-            set
-            {
-                if (value != StartPoint)
-                    finishPoint = value;
-            }
-        }
-        public int Thickness
-        {
-            get
-            {
-                return thickness;
-            }
-            set
-            {
-                if (value > 0)
-                    thickness = value;
-            }
-        }
-        public Color Color
-        {
-            get
-            {
-                return color;
-            }
-            set
-            {
-                if (value != null)
-                    color = value;
-            }
-        }
-        public int ShapeTag
-        {
-            get
-            {
-                return shapeTag;
-            }
-            set
-            {
-                if (value > 0)
-                    shapeTag = value;
-            }
-        }
+        public Point FinishPoint { get; set; }
+        public Color Color { get; set; }
+        public int Thickness { get; set; }
+        public int ShapeTag { get; set; } 
 
         public Drawer(Graphics graphic, Dictionary<int, Shape> shapesDictionary)
         {
@@ -97,7 +49,7 @@ namespace ShapesDrawing
                 }       
             }
         }
-        public void AddShapesToDictionary()
+        private void AddShapesToDictionary()
         {
             shapesDictionary.Clear();
             shapesDictionary.Add(CircleTag, new Circle(StartPoint, FinishPoint, Color, Thickness, "Circle"));

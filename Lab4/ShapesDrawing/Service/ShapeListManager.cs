@@ -5,15 +5,15 @@ using System.Windows.Forms;
 
 namespace ShapesDrawing
 {
-    public class Service : IService
+    public class ShapeListManager : IShapesListManager
     {
         private IList<Shape> shapes;
         private IList<Shape> deletedShapes;
-        private ISerializer serializer;
+        private IShapeListSerializer serializer;
         private Shape editableShape;
         private Type[] pluginTypes;
 
-        public Service(ISerializer serializer, IList<Shape> shapes, IList<Shape> deletedShapes)
+        public ShapeListManager(IShapeListSerializer serializer, IList<Shape> shapes, IList<Shape> deletedShapes)
         {
             this.shapes = shapes;
             this.deletedShapes = deletedShapes;

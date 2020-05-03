@@ -17,7 +17,6 @@ namespace ShapesDrawing
 
         void InitializeShapePlugin(Plugin shapePlugin);
         void DrawShapeList(IList<Shape> shapes);
-        void AddShapesToDictionary();
         Shape CreateFigure();
     }
 }

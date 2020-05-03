@@ -11,10 +11,10 @@ namespace ShapesDrawing
     public partial class ShapeDrawingForm : Form
     {
         private IDrawer shapesDrawer;
-        private IService shapesListManager;
+        private IShapesListManager shapesListManager;
         private IPluginsManager pluginsManager;
 
-        public ShapeDrawingForm(IService shapesListManager, IPluginsManager pluginsManager)
+        public ShapeDrawingForm(IShapesListManager shapesListManager, IPluginsManager pluginsManager)
         {
             this.shapesListManager = shapesListManager;
             this.pluginsManager = pluginsManager;
@@ -34,7 +34,6 @@ namespace ShapesDrawing
         private void ShapeDrawingForm_Load(object sender, EventArgs e)
         {
             shapesDrawer = new Drawer(DrawingBoardPictureBox.CreateGraphics(), new Dictionary<int, Shape>());
-            shapesDrawer.AddShapesToDictionary();
         }
         private void ThicknessComboBox_TextUpdate(object sender, EventArgs e)
         {
