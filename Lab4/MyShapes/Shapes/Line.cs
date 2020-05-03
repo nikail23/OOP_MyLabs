@@ -7,14 +7,8 @@ namespace MyShapes
     [Serializable]
     public class Line : Shape
     {
-        protected Color color;
-        protected int thickness;
-
-        public Line(Point firstPoint, Point secondPoint, Color color, int thickness, String name) : base(firstPoint, secondPoint, name)
-        {
-            this.thickness = thickness;
-            this.color = color;
-        }
+        public Line() { }
+        public Line(Point firstPoint, Point secondPoint, Color color, int thickness, String name) : base(firstPoint, secondPoint, name, color, thickness) { }
 
         public override void ConfirmShapeParametersChange(DataGridView parametersGrid)
         {
@@ -23,7 +17,7 @@ namespace MyShapes
             firstPoint.Y = int.Parse(parametersGrid[PropertyColumnIndex, FirstPointYIndex].Value.ToString());
             secondPoint.X = int.Parse(parametersGrid[PropertyColumnIndex, SecondPointXIndex].Value.ToString());
             secondPoint.Y = int.Parse(parametersGrid[PropertyColumnIndex, SecondPointYIndex].Value.ToString());
-            color = parametersGrid[PropertyColumnIndex, ColorIndex].Style.BackColor;
+            color = parametersGrid[PropertyColumnIndex, ColorIndex].Style.BackColor.ToArgb();
             thickness = int.Parse(parametersGrid[PropertyColumnIndex, ThicknessIndex].Value.ToString());
         }
 
@@ -36,13 +30,13 @@ namespace MyShapes
             parametersGrid.Rows.Add("X2:", secondPoint.X);
             parametersGrid.Rows.Add("Y2:", secondPoint.Y);
             parametersGrid.Rows.Add("Цвет:", "");
-            parametersGrid[1, 5].Style.BackColor = color;
+            parametersGrid[1, 5].Style.BackColor = Color.FromArgb(color);
             parametersGrid.Rows.Add("Толщина:", thickness);
         }
 
         public override void Draw(Graphics graphic)
         {
-            Pen pen = new Pen(color, thickness);
+            Pen pen = new Pen(Color.FromArgb(color), thickness);
             graphic.DrawLine(pen, firstPoint, secondPoint);
         }
     }

@@ -1,0 +1,16 @@
+C:\Users\asus\Desktop\OOP_MyLabs\Cross\Cross\bin\Debug\netstandard2.0\Cross.deps.json
+C:\Users\asus\Desktop\OOP_MyLabs\Cross\Cross\bin\Debug\netstandard2.0\Cross.dll
+C:\Users\asus\Desktop\OOP_MyLabs\Cross\Cross\bin\Debug\netstandard2.0\MyShapes.dll
+C:\Users\asus\Desktop\OOP_MyLabs\Cross\Cross\bin\Debug\netstandard2.0\System.Windows.Forms.dll
+C:\Users\asus\Desktop\OOP_MyLabs\Cross\Cross\bin\Debug\netstandard2.0\System.Security.dll
+C:\Users\asus\Desktop\OOP_MyLabs\Cross\Cross\bin\Debug\netstandard2.0\System.Configuration.dll
+C:\Users\asus\Desktop\OOP_MyLabs\Cross\Cross\bin\Debug\netstandard2.0\Accessibility.dll
+C:\Users\asus\Desktop\OOP_MyLabs\Cross\Cross\bin\Debug\netstandard2.0\System.Deployment.dll
+C:\Users\asus\Desktop\OOP_MyLabs\Cross\Cross\bin\Debug\netstandard2.0\System.Runtime.Serialization.Formatters.Soap.dll
+C:\Users\asus\Desktop\OOP_MyLabs\Cross\Cross\bin\Debug\netstandard2.0\MyShapes.pdb
+C:\Users\asus\Desktop\OOP_MyLabs\Cross\Cross\obj\Debug\netstandard2.0\Cross.AssemblyInfoInputs.cache
+C:\Users\asus\Desktop\OOP_MyLabs\Cross\Cross\obj\Debug\netstandard2.0\Cross.AssemblyInfo.cs
+C:\Users\asus\Desktop\OOP_MyLabs\Cross\Cross\obj\Debug\netstandard2.0\Cross.csproj.CopyComplete
+C:\Users\asus\Desktop\OOP_MyLabs\Cross\Cross\bin\Debug\netstandard2.0\Cross.pdb
+C:\Users\asus\Desktop\OOP_MyLabs\Cross\Cross\obj\Debug\netstandard2.0\Cross.dll
+C:\Users\asus\Desktop\OOP_MyLabs\Cross\Cross\obj\Debug\netstandard2.0\Cross.pdb

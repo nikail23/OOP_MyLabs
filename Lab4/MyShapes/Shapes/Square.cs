@@ -6,6 +6,7 @@ namespace MyShapes
     [Serializable]
     public class Square : Rectangle
     {
+        public Square() { }
         public Square(Point firstPoint, Point secondPoint, Color color, int thickness, String name) : base(firstPoint, secondPoint, color, thickness, name) { }
 
         protected override int Width
@@ -18,7 +19,7 @@ namespace MyShapes
 
         public override void Draw(Graphics graphic)
         {
-            Pen pen = new Pen(color, thickness);
+            Pen pen = new Pen(Color.FromArgb(color), thickness);
             graphic.DrawRectangle(pen, TopLeftPoint.X, TopLeftPoint.Y, Width, Width);
         }
     }

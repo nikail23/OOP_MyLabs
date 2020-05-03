@@ -1,6 +1,8 @@
 ﻿using MyShapes;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Reflection;
 
 namespace ShapesDrawing
 {
@@ -12,7 +14,10 @@ namespace ShapesDrawing
         Color Color { get; set; }
         int ShapeTag { get; set; }
 
+
+        void InitializeShapePlugin(Plugin shapePlugin);
         void DrawShapeList(IList<Shape> shapes);
+        void AddShapesToDictionary();
         Shape CreateFigure();
     }
 }

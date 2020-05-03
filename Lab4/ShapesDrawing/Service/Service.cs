@@ -1,4 +1,5 @@
 ﻿using MyShapes;
+using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
@@ -10,6 +11,8 @@ namespace ShapesDrawing
         private IList<Shape> deletedShapes;
         private ISerializer serializer;
         private Shape editableShape;
+        private Type[] pluginTypes;
+
         public Service(ISerializer serializer, IList<Shape> shapes, IList<Shape> deletedShapes)
         {
             this.shapes = shapes;
@@ -46,7 +49,8 @@ namespace ShapesDrawing
         }
         public void LoadList()
         {
-            shapes = serializer.Deserialize();
+            if (pluginTypes != null)
+                shapes = serializer.Deserialize(pluginTypes);
         }
         public IList<Shape> GetList()
         {
@@ -54,14 +58,16 @@ namespace ShapesDrawing
         }
         public void SaveList()
         {
-            serializer.Serialize(shapes);
+            if (pluginTypes != null)
+                serializer.Serialize(shapes, pluginTypes);
         }
         public void RefreshFormShapesList(ListBox shapesListBox)
         {
             shapesListBox.Items.Clear();
-            foreach (Shape shape in shapes)
+            foreach (var shape in shapes)
             {
-                shapesListBox.Items.Add(shape.name);
+                if (shape != null)
+                    shapesListBox.Items.Add(shape.name);
             }
         }
         public void ShowShapeParameters(DataGridView parametersGrid, int shapeIndex)
@@ -85,6 +91,12 @@ namespace ShapesDrawing
             {
                 return null;
             }
+        }
+
+        public void InitializePluginTypes(Type[] pluginTypes)
+        {
+            if (pluginTypes != null)
+                this.pluginTypes = pluginTypes;
         }
     }
 }

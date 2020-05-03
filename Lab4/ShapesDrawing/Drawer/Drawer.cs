@@ -2,11 +2,13 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
+using System.Reflection;
 using Rectangle = MyShapes.Rectangle;
 
 namespace ShapesDrawing
 {
-    class Drawer : IDrawer
+    internal class Drawer : IDrawer
     {
         public const int CircleTag = 1;
         public const int SquareTag = 2;
@@ -23,32 +25,33 @@ namespace ShapesDrawing
         private int thickness;
         private Color color;
         private int shapeTag;
-        private Point finishPoint;
+        private List<Plugin> plugins; 
 
+        private Point finishPoint;
         public Point StartPoint { get; set; }
-        public Point FinishPoint 
+        public Point FinishPoint
         {
-            get 
-            { 
-                return finishPoint; 
-            } 
-            set
-            { 
-                if (value != StartPoint) 
-                    finishPoint = value; 
-            } 
-        }
-        public int Thickness 
-        {
-            get 
+            get
             {
-                return thickness; 
+                return finishPoint;
             }
-            set 
+            set
+            {
+                if (value != StartPoint)
+                    finishPoint = value;
+            }
+        }
+        public int Thickness
+        {
+            get
+            {
+                return thickness;
+            }
+            set
             {
                 if (value > 0)
                     thickness = value;
-            } 
+            }
         }
         public Color Color
         {
@@ -77,35 +80,61 @@ namespace ShapesDrawing
 
         public Drawer(Graphics graphic, Dictionary<int, Shape> shapesDictionary)
         {
-            this.graphic = graphic;
             Thickness = DefaultThickness;
             ShapeTag = DefaultShapeTag;
             Color = DefaultColor;
-            this.shapesDictionary = shapesDictionary;
+            this.graphic = graphic;
+            this.shapesDictionary = shapesDictionary;          
+            plugins = new List<Plugin>();
         }
         public void DrawShapeList(IList<Shape> shapes)
         {
             foreach (var shape in shapes)
             {
-                shape.Draw(graphic);
+                if (shape != null)
+                {
+                    shape.Draw(graphic);
+                }       
             }
         }
-        private void AddShapesToDictionary()
+        public void AddShapesToDictionary()
         {
-            
+            shapesDictionary.Clear();
             shapesDictionary.Add(CircleTag, new Circle(StartPoint, FinishPoint, Color, Thickness, "Circle"));
             shapesDictionary.Add(SquareTag, new Square(StartPoint, FinishPoint, Color, Thickness, "Square"));
             shapesDictionary.Add(RectangleTag, new Rectangle(StartPoint, FinishPoint, Color, Thickness, "Rectangle"));
             shapesDictionary.Add(TriangleTag, new Triangle(StartPoint, FinishPoint, Color, Thickness, "Triangle"));
             shapesDictionary.Add(EllipseTag, new Ellipse(StartPoint, FinishPoint, Color, Thickness, "Ellipse"));
             shapesDictionary.Add(LineTag, new Line(StartPoint, FinishPoint, Color, Thickness, "Line"));
+
+            if (plugins != null)
+            {
+                var shapesDictionaryIndex = LineTag + 1;
+
+                foreach (var plugin in plugins)
+                foreach (var type in plugin.TypesList)
+                {
+                    var shape = (Shape)plugin.Assembly.CreateInstance(type.FullName, false, BindingFlags.CreateInstance, null, new object[] { StartPoint, FinishPoint, Color, Thickness, type.Name }, null, null);
+                    shapesDictionary.Add(shapesDictionaryIndex, shape);
+                    shapesDictionaryIndex++;
+                }
+            }
         }
         public Shape CreateFigure()
         {
             AddShapesToDictionary();
-            Shape shape = shapesDictionary[ShapeTag];
-            shapesDictionary.Clear();
+            Shape shape = null;
+            if (shapesDictionary.Count != 0)
+            {
+                shape = shapesDictionary[ShapeTag];
+            }
             return shape;
+        }
+
+        public void InitializeShapePlugin(Plugin plugin)
+        {
+            if (plugin != null)
+                plugins.Add(plugin);
         }
     }
 }

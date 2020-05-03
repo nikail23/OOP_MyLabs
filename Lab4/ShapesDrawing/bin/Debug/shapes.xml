@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<ArrayOfShape xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Shape xsi:type="Cross">
+    <firstPoint>
+      <X>99</X>
+      <Y>72</Y>
+    </firstPoint>
+    <secondPoint>
+      <X>328</X>
+      <Y>235</Y>
+    </secondPoint>
+    <color>-16777216</color>
+    <thickness>1</thickness>
+    <name>Cross</name>
+  </Shape>
+  <Shape xsi:type="Cross">
+    <firstPoint>
+      <X>454</X>
+      <Y>170</Y>
+    </firstPoint>
+    <secondPoint>
+      <X>614</X>
+      <Y>335</Y>
+    </secondPoint>
+    <color>-16777216</color>
+    <thickness>1</thickness>
+    <name>Cross</name>
+  </Shape>
+  <Shape xsi:type="Cross">
+    <firstPoint>
+      <X>165</X>
+      <Y>332</Y>
+    </firstPoint>
+    <secondPoint>
+      <X>388</X>
+      <Y>461</Y>
+    </secondPoint>
+    <color>-16777216</color>
+    <thickness>1</thickness>
+    <name>Cross</name>
+  </Shape>
+  <Shape xsi:type="Ellipse">
+    <firstPoint>
+      <X>46</X>
+      <Y>132</Y>
+    </firstPoint>
+    <secondPoint>
+      <X>377</X>
+      <Y>327</Y>
+    </secondPoint>
+    <color>-16777216</color>
+    <thickness>1</thickness>
+    <name>Ellipse</name>
+  </Shape>
+</ArrayOfShape>

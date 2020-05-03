@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaidJuicyDLCforMyLab3", "PaidJuicyDLCforMyLab3\PaidJuicyDLCforMyLab3.csproj", "{8CF46716-424A-466F-A714-83E2F83413B0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8CF46716-424A-466F-A714-83E2F83413B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CF46716-424A-466F-A714-83E2F83413B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CF46716-424A-466F-A714-83E2F83413B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CF46716-424A-466F-A714-83E2F83413B0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {85D4384E-E29E-403D-BD02-5A8F593DDFE9}
+	EndGlobalSection
+EndGlobal

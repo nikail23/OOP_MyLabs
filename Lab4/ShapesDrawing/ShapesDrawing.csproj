@@ -47,6 +47,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -65,10 +71,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Plugins\IPlugin.cs" />
     <Compile Include="Plugins\IPluginScanner.cs" />
+    <Compile Include="Plugins\IPluginsManager.cs" />
+    <Compile Include="Plugins\Plugin.cs" />
     <Compile Include="Plugins\PluginScanner.cs" />
-    <Compile Include="Serializer\BinarySerializer.cs" />
+    <Compile Include="Plugins\PluginsManager.cs" />
+    <Compile Include="Serializer\ShapeXmlSerializer.cs" />
     <Compile Include="Service\IService.cs" />
     <Compile Include="Service\Service.cs" />
     <Compile Include="Drawer\Drawer.cs" />
@@ -95,6 +103,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="key.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

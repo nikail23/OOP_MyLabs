@@ -1,9 +1,16 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Xml.Serialization;
 
 namespace MyShapes
 {
+    [XmlInclude(typeof(Square))]
+    [XmlInclude(typeof(Triangle))]
+    [XmlInclude(typeof(Rectangle))]
+    [XmlInclude(typeof(Line))]
+    [XmlInclude(typeof(Ellipse))]
+    [XmlInclude(typeof(Circle))]
     [Serializable]
     public abstract class Shape
     {
@@ -16,16 +23,21 @@ namespace MyShapes
         public const int ColorIndex = 5;
         public const int ThicknessIndex = 6;
 
-        protected Point firstPoint;
-        protected Point secondPoint;
-        
+        public Point firstPoint;
+        public Point secondPoint;
+        public int color; 
+        public int thickness;
         public string name;
 
-        public Shape(Point firstPoint, Point secondPoint, string name)
+        public Shape() { }
+
+        public Shape(Point firstPoint, Point secondPoint, string name, Color color, int thickness)
         {
             this.firstPoint = firstPoint;
             this.secondPoint = secondPoint;
             this.name = name;
+            this.color = color.ToArgb();
+            this.thickness = thickness;
         }
 
         public abstract void Draw(Graphics graphic);

@@ -7,14 +7,9 @@ namespace MyShapes
     [Serializable]
     public class Rectangle : Shape
     {
-        protected Color color;
-        protected int thickness;
+        public Rectangle() { }
 
-        public Rectangle(Point firstPoint, Point secondPoint, Color color, int thickness, String name) : base(firstPoint, secondPoint, name)
-        {
-            this.color = color;
-            this.thickness = thickness;
-        }
+        public Rectangle(Point firstPoint, Point secondPoint, Color color, int thickness, String name) : base(firstPoint, secondPoint, name, color, thickness) { }
 
         protected virtual int Width
         {
@@ -46,7 +41,7 @@ namespace MyShapes
             parametersGrid.Rows.Add("X2:", secondPoint.X);
             parametersGrid.Rows.Add("Y2:", secondPoint.Y);
             parametersGrid.Rows.Add("Цвет:", "");
-            parametersGrid[1, 5].Style.BackColor = color;
+            parametersGrid[1, 5].Style.BackColor = Color.FromArgb(color);
             parametersGrid.Rows.Add("Толщина:", thickness);
         }
 
@@ -57,13 +52,13 @@ namespace MyShapes
             firstPoint.Y = int.Parse(parametersGrid[PropertyColumnIndex, FirstPointYIndex].Value.ToString());
             secondPoint.X = int.Parse(parametersGrid[PropertyColumnIndex, SecondPointXIndex].Value.ToString());
             secondPoint.Y = int.Parse(parametersGrid[PropertyColumnIndex, SecondPointYIndex].Value.ToString());
-            color = parametersGrid[PropertyColumnIndex, ColorIndex].Style.BackColor;
+            color = parametersGrid[PropertyColumnIndex, ColorIndex].Style.BackColor.ToArgb();
             thickness = int.Parse(parametersGrid[PropertyColumnIndex, ThicknessIndex].Value.ToString());
         }
 
         public override void Draw(Graphics graphic)
         {
-            Pen pen = new Pen(color, thickness);
+            Pen pen = new Pen(Color.FromArgb(color), thickness);
             graphic.DrawRectangle(pen, TopLeftPoint.X, TopLeftPoint.Y, Width, Height);
         }
     }

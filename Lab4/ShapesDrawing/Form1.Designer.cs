@@ -28,18 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pbDrawingBoard = new System.Windows.Forms.PictureBox();
+            this.DrawingBoardPictureBox = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ConnectPluginButon = new System.Windows.Forms.Button();
             this.ShapesTypesListBox = new System.Windows.Forms.ListBox();
-            this.editButton = new System.Windows.Forms.Button();
-            this.btnDeserializable = new System.Windows.Forms.Button();
-            this.btnSerializable = new System.Windows.Forms.Button();
-            this.btnRedo = new System.Windows.Forms.Button();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.btnUndo = new System.Windows.Forms.Button();
-            this.pbColor = new System.Windows.Forms.PictureBox();
+            this.DeserializeButton = new System.Windows.Forms.Button();
+            this.SerializeButton = new System.Windows.Forms.Button();
+            this.RedoButton = new System.Windows.Forms.Button();
+            this.ClearButton = new System.Windows.Forms.Button();
+            this.UndoButton = new System.Windows.Forms.Button();
+            this.ColorPictureBox = new System.Windows.Forms.PictureBox();
             this.lblThickness = new System.Windows.Forms.Label();
-            this.cbThickness = new System.Windows.Forms.ComboBox();
+            this.ThicknessComboBox = new System.Windows.Forms.ComboBox();
             this.ColorDialog = new System.Windows.Forms.ColorDialog();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,40 +47,50 @@
             this.charColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.valueColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CurrentShapesListBox = new System.Windows.Forms.ListBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDrawingBoard)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DrawingBoardPictureBox)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbColor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ColorPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.shapeParametersGrid)).BeginInit();
             this.SuspendLayout();
             // 
-            // pbDrawingBoard
+            // DrawingBoardPictureBox
             // 
-            this.pbDrawingBoard.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbDrawingBoard.Location = new System.Drawing.Point(128, 12);
-            this.pbDrawingBoard.Name = "pbDrawingBoard";
-            this.pbDrawingBoard.Size = new System.Drawing.Size(689, 585);
-            this.pbDrawingBoard.TabIndex = 0;
-            this.pbDrawingBoard.TabStop = false;
-            this.pbDrawingBoard.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PbDrawingBoard_MouseDown);
-            this.pbDrawingBoard.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PbDrawingBoard_MouseUp);
+            this.DrawingBoardPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.DrawingBoardPictureBox.Location = new System.Drawing.Point(128, 12);
+            this.DrawingBoardPictureBox.Name = "DrawingBoardPictureBox";
+            this.DrawingBoardPictureBox.Size = new System.Drawing.Size(689, 585);
+            this.DrawingBoardPictureBox.TabIndex = 0;
+            this.DrawingBoardPictureBox.TabStop = false;
+            this.DrawingBoardPictureBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DrawingBoardPictureBox_MouseDown);
+            this.DrawingBoardPictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.DrawingBoardPictureBox_MouseUp);
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.ConnectPluginButon);
             this.panel1.Controls.Add(this.ShapesTypesListBox);
-            this.panel1.Controls.Add(this.editButton);
-            this.panel1.Controls.Add(this.btnDeserializable);
-            this.panel1.Controls.Add(this.btnSerializable);
-            this.panel1.Controls.Add(this.btnRedo);
-            this.panel1.Controls.Add(this.btnClear);
-            this.panel1.Controls.Add(this.btnUndo);
-            this.panel1.Controls.Add(this.pbColor);
+            this.panel1.Controls.Add(this.DeserializeButton);
+            this.panel1.Controls.Add(this.SerializeButton);
+            this.panel1.Controls.Add(this.RedoButton);
+            this.panel1.Controls.Add(this.ClearButton);
+            this.panel1.Controls.Add(this.UndoButton);
+            this.panel1.Controls.Add(this.ColorPictureBox);
             this.panel1.Controls.Add(this.lblThickness);
-            this.panel1.Controls.Add(this.cbThickness);
+            this.panel1.Controls.Add(this.ThicknessComboBox);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(110, 585);
             this.panel1.TabIndex = 7;
+            // 
+            // ConnectPluginButon
+            // 
+            this.ConnectPluginButon.Location = new System.Drawing.Point(2, 475);
+            this.ConnectPluginButon.Name = "ConnectPluginButon";
+            this.ConnectPluginButon.Size = new System.Drawing.Size(103, 23);
+            this.ConnectPluginButon.TabIndex = 16;
+            this.ConnectPluginButon.Text = "Подключить плагин";
+            this.ConnectPluginButon.UseVisualStyleBackColor = true;
+            this.ConnectPluginButon.Click += new System.EventHandler(this.ConnectPluginButton_Click);
             // 
             // ShapesTypesListBox
             // 
@@ -98,74 +108,65 @@
             this.ShapesTypesListBox.TabIndex = 15;
             this.ShapesTypesListBox.SelectedIndexChanged += new System.EventHandler(this.ShapesTypesListBox_SelectedIndexChanged);
             // 
-            // editButton
+            // DeserializeButton
             // 
-            this.editButton.Location = new System.Drawing.Point(2, 475);
-            this.editButton.Name = "editButton";
-            this.editButton.Size = new System.Drawing.Size(103, 23);
-            this.editButton.TabIndex = 14;
-            this.editButton.Text = "Редактировать";
-            this.editButton.UseVisualStyleBackColor = true;
+            this.DeserializeButton.Location = new System.Drawing.Point(2, 446);
+            this.DeserializeButton.Name = "DeserializeButton";
+            this.DeserializeButton.Size = new System.Drawing.Size(103, 23);
+            this.DeserializeButton.TabIndex = 13;
+            this.DeserializeButton.Text = "Загрузить";
+            this.DeserializeButton.UseVisualStyleBackColor = true;
+            this.DeserializeButton.Click += new System.EventHandler(this.DeserializeButton_Click);
             // 
-            // btnDeserializable
+            // SerializeButton
             // 
-            this.btnDeserializable.Location = new System.Drawing.Point(2, 446);
-            this.btnDeserializable.Name = "btnDeserializable";
-            this.btnDeserializable.Size = new System.Drawing.Size(103, 23);
-            this.btnDeserializable.TabIndex = 13;
-            this.btnDeserializable.Text = "Загрузить";
-            this.btnDeserializable.UseVisualStyleBackColor = true;
-            this.btnDeserializable.Click += new System.EventHandler(this.BtnDeserializable_Click);
+            this.SerializeButton.Location = new System.Drawing.Point(2, 417);
+            this.SerializeButton.Name = "SerializeButton";
+            this.SerializeButton.Size = new System.Drawing.Size(103, 23);
+            this.SerializeButton.TabIndex = 8;
+            this.SerializeButton.Text = "Сохранить";
+            this.SerializeButton.UseVisualStyleBackColor = true;
+            this.SerializeButton.Click += new System.EventHandler(this.SerializeButton_Click);
             // 
-            // btnSerializable
+            // RedoButton
             // 
-            this.btnSerializable.Location = new System.Drawing.Point(2, 417);
-            this.btnSerializable.Name = "btnSerializable";
-            this.btnSerializable.Size = new System.Drawing.Size(103, 23);
-            this.btnSerializable.TabIndex = 8;
-            this.btnSerializable.Text = "Сохранить";
-            this.btnSerializable.UseVisualStyleBackColor = true;
-            this.btnSerializable.Click += new System.EventHandler(this.BtnSerializable_Click);
+            this.RedoButton.Location = new System.Drawing.Point(3, 388);
+            this.RedoButton.Name = "RedoButton";
+            this.RedoButton.Size = new System.Drawing.Size(102, 23);
+            this.RedoButton.TabIndex = 9;
+            this.RedoButton.Text = "Вперед";
+            this.RedoButton.UseVisualStyleBackColor = true;
+            this.RedoButton.Click += new System.EventHandler(this.RedoButton_Click);
             // 
-            // btnRedo
+            // ClearButton
             // 
-            this.btnRedo.Location = new System.Drawing.Point(3, 388);
-            this.btnRedo.Name = "btnRedo";
-            this.btnRedo.Size = new System.Drawing.Size(102, 23);
-            this.btnRedo.TabIndex = 9;
-            this.btnRedo.Text = "Вперед";
-            this.btnRedo.UseVisualStyleBackColor = true;
-            this.btnRedo.Click += new System.EventHandler(this.Button2_Click);
+            this.ClearButton.Location = new System.Drawing.Point(3, 330);
+            this.ClearButton.Name = "ClearButton";
+            this.ClearButton.Size = new System.Drawing.Size(102, 23);
+            this.ClearButton.TabIndex = 12;
+            this.ClearButton.Text = "Очистить";
+            this.ClearButton.UseVisualStyleBackColor = true;
+            this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
             // 
-            // btnClear
+            // UndoButton
             // 
-            this.btnClear.Location = new System.Drawing.Point(3, 330);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(102, 23);
-            this.btnClear.TabIndex = 12;
-            this.btnClear.Text = "Очистить";
-            this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.BtnClear_Click);
+            this.UndoButton.Location = new System.Drawing.Point(3, 359);
+            this.UndoButton.Name = "UndoButton";
+            this.UndoButton.Size = new System.Drawing.Size(102, 23);
+            this.UndoButton.TabIndex = 8;
+            this.UndoButton.Text = "Назад";
+            this.UndoButton.UseVisualStyleBackColor = true;
+            this.UndoButton.Click += new System.EventHandler(this.UndoButton_Click);
             // 
-            // btnUndo
+            // ColorPictureBox
             // 
-            this.btnUndo.Location = new System.Drawing.Point(3, 359);
-            this.btnUndo.Name = "btnUndo";
-            this.btnUndo.Size = new System.Drawing.Size(102, 23);
-            this.btnUndo.TabIndex = 8;
-            this.btnUndo.Text = "Назад";
-            this.btnUndo.UseVisualStyleBackColor = true;
-            this.btnUndo.Click += new System.EventHandler(this.Button1_Click);
-            // 
-            // pbColor
-            // 
-            this.pbColor.BackColor = System.Drawing.Color.Black;
-            this.pbColor.Location = new System.Drawing.Point(28, 245);
-            this.pbColor.Name = "pbColor";
-            this.pbColor.Size = new System.Drawing.Size(53, 50);
-            this.pbColor.TabIndex = 9;
-            this.pbColor.TabStop = false;
-            this.pbColor.Click += new System.EventHandler(this.PictureBox1_Click);
+            this.ColorPictureBox.BackColor = System.Drawing.Color.Black;
+            this.ColorPictureBox.Location = new System.Drawing.Point(28, 245);
+            this.ColorPictureBox.Name = "ColorPictureBox";
+            this.ColorPictureBox.Size = new System.Drawing.Size(53, 50);
+            this.ColorPictureBox.TabIndex = 9;
+            this.ColorPictureBox.TabStop = false;
+            this.ColorPictureBox.Click += new System.EventHandler(this.ColorPictureBox_Click);
             // 
             // lblThickness
             // 
@@ -176,10 +177,10 @@
             this.lblThickness.TabIndex = 8;
             this.lblThickness.Text = "Толщина";
             // 
-            // cbThickness
+            // ThicknessComboBox
             // 
-            this.cbThickness.FormattingEnabled = true;
-            this.cbThickness.Items.AddRange(new object[] {
+            this.ThicknessComboBox.FormattingEnabled = true;
+            this.ThicknessComboBox.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
@@ -190,12 +191,12 @@
             "8",
             "9",
             "10"});
-            this.cbThickness.Location = new System.Drawing.Point(3, 199);
-            this.cbThickness.Name = "cbThickness";
-            this.cbThickness.Size = new System.Drawing.Size(102, 21);
-            this.cbThickness.TabIndex = 7;
-            this.cbThickness.Text = "1";
-            this.cbThickness.TextChanged += new System.EventHandler(this.ComboBox1_TextUpdate);
+            this.ThicknessComboBox.Location = new System.Drawing.Point(3, 199);
+            this.ThicknessComboBox.Name = "ThicknessComboBox";
+            this.ThicknessComboBox.Size = new System.Drawing.Size(102, 21);
+            this.ThicknessComboBox.TabIndex = 7;
+            this.ThicknessComboBox.Text = "1";
+            this.ThicknessComboBox.TextChanged += new System.EventHandler(this.ThicknessComboBox_TextUpdate);
             // 
             // label1
             // 
@@ -267,16 +268,16 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pbDrawingBoard);
+            this.Controls.Add(this.DrawingBoardPictureBox);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ShapeDrawingForm";
             this.Text = "Лабораторная 1-2. Рисование фигур.";
-            this.Load += new System.EventHandler(this.FmShapeDrawing_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pbDrawingBoard)).EndInit();
+            this.Load += new System.EventHandler(this.ShapeDrawingForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DrawingBoardPictureBox)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbColor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ColorPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.shapeParametersGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -285,18 +286,17 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pbDrawingBoard;
+        private System.Windows.Forms.PictureBox DrawingBoardPictureBox;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblThickness;
-        private System.Windows.Forms.ComboBox cbThickness;
+        private System.Windows.Forms.ComboBox ThicknessComboBox;
         private System.Windows.Forms.ColorDialog ColorDialog;
-        private System.Windows.Forms.PictureBox pbColor;
-        private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.Button btnUndo;
-        private System.Windows.Forms.Button btnRedo;
-        private System.Windows.Forms.Button btnSerializable;
-        private System.Windows.Forms.Button btnDeserializable;
-        private System.Windows.Forms.Button editButton;
+        private System.Windows.Forms.PictureBox ColorPictureBox;
+        private System.Windows.Forms.Button ClearButton;
+        private System.Windows.Forms.Button UndoButton;
+        private System.Windows.Forms.Button RedoButton;
+        private System.Windows.Forms.Button SerializeButton;
+        private System.Windows.Forms.Button DeserializeButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView shapeParametersGrid;
@@ -304,6 +304,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn valueColumn;
         private System.Windows.Forms.ListBox ShapesTypesListBox;
         private System.Windows.Forms.ListBox CurrentShapesListBox;
+        private System.Windows.Forms.Button ConnectPluginButon;
     }
 }
 

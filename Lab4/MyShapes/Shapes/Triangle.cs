@@ -7,21 +7,15 @@ namespace MyShapes
     [Serializable]
     public class Triangle : Shape
     {
-        protected Color color;
-        protected int thickness;
-        protected Point[] points;
-        [NonSerialized]
+        private Point[] points;
         private Point firstTrianglePoint, secondTrianglePoint, thirdTrianglePoint;
         
-        public Triangle(Point firstPoint, Point secondPoint, Color color, int thickness, String name) : base(firstPoint, secondPoint, name)
-        {
-            this.color = color;
-            this.thickness = thickness;
-        }
+        public Triangle() { }
+        public Triangle(Point firstPoint, Point secondPoint, Color color, int thickness, String name) : base(firstPoint, secondPoint, name, color, thickness) { }
 
         public override void Draw(Graphics graphic)
         {
-            Pen pen = new Pen(color, thickness);
+            Pen pen = new Pen(Color.FromArgb(color), thickness);
             CheckCondition();
             graphic.DrawPolygon(pen, points);
         }
@@ -76,7 +70,7 @@ namespace MyShapes
             parametersGrid.Rows.Add("X2:", secondPoint.X);
             parametersGrid.Rows.Add("Y2:", secondPoint.Y);
             parametersGrid.Rows.Add("Цвет:", "");
-            parametersGrid[1, 5].Style.BackColor = color;
+            parametersGrid[1, 5].Style.BackColor = Color.FromArgb(color);
             parametersGrid.Rows.Add("Толщина:", thickness);
         }
 
@@ -87,7 +81,7 @@ namespace MyShapes
             firstPoint.Y = int.Parse(parametersGrid[PropertyColumnIndex, FirstPointYIndex].Value.ToString());
             secondPoint.X = int.Parse(parametersGrid[PropertyColumnIndex, SecondPointXIndex].Value.ToString());
             secondPoint.Y = int.Parse(parametersGrid[PropertyColumnIndex, SecondPointYIndex].Value.ToString());
-            color = parametersGrid[PropertyColumnIndex, ColorIndex].Style.BackColor;
+            color = parametersGrid[PropertyColumnIndex, ColorIndex].Style.BackColor.ToArgb();
             thickness = int.Parse(parametersGrid[PropertyColumnIndex, ThicknessIndex].Value.ToString());
         }
     }
