@@ -54,6 +54,10 @@
     <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MyShapes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7d73b1633f073670, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MyShapes\bin\Debug\netstandard2.0\MyShapes.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -129,10 +133,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MyShapes\MyShapes.csproj">
-      <Project>{f10ef24e-4f4d-4019-8505-65a7d5255608}</Project>
-      <Name>MyShapes</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Serialization\Serialization.csproj">
       <Project>{cf9ff8d0-d074-4c6c-9551-d25d59b89a4a}</Project>
       <Name>Serialization</Name>

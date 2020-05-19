@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+    <ApplicationIcon />
+    <OutputType>Library</OutputType>
+    <StartupObject />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="MyShapes">
+      <HintPath>..\..\Lab4\MyShapes\bin\Debug\netstandard2.0\MyShapes.dll</HintPath>
+    </Reference>
+    <Reference Include="Serialization">
+      <HintPath>..\..\Lab4\Serialization\bin\Debug\netstandard2.0\Serialization.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Drawing;
+using System.Runtime.Serialization;
 using System.Windows.Forms;
 
 namespace MyShapes
 {
     [Serializable]
+    [DataContract]
     public class Triangle : Shape
     {
         private Point[] points;
+        [DataMember]
         private Point firstTrianglePoint, secondTrianglePoint, thirdTrianglePoint;
         
         public Triangle() { }
@@ -15,7 +18,7 @@ namespace MyShapes
 
         public override void Draw(Graphics graphic)
         {
-            Pen pen = new Pen(Color.FromArgb(color), thickness);
+            var pen = new Pen(Color.FromArgb(color), thickness);
             CheckCondition();
             graphic.DrawPolygon(pen, points);
         }

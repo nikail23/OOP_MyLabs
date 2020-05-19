@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Drawing;
+using System.Runtime.Serialization;
 
 namespace MyShapes
 {
     [Serializable]
+    [DataContract]
     public class Ellipse : Rectangle
     {
         public Ellipse() { }

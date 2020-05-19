@@ -1,10 +1,18 @@
 ﻿using System;
 using System.Drawing;
+using System.Runtime.Serialization;
 using System.Windows.Forms;
 using System.Xml.Serialization;
 
 namespace MyShapes
 {
+    [DataContract]
+    [KnownType(typeof(Square))]
+    [KnownType(typeof(Triangle))]
+    [KnownType(typeof(Rectangle))]
+    [KnownType(typeof(Line))]
+    [KnownType(typeof(Ellipse))]
+    [KnownType(typeof(Circle))]
     [XmlInclude(typeof(Square))]
     [XmlInclude(typeof(Triangle))]
     [XmlInclude(typeof(Rectangle))]
@@ -23,10 +31,15 @@ namespace MyShapes
         public const int ColorIndex = 5;
         public const int ThicknessIndex = 6;
 
+        [DataMember]
         public Point firstPoint;
+        [DataMember]
         public Point secondPoint;
-        public int color; 
+        [DataMember]
+        public int color;
+        [DataMember]
         public int thickness;
+        [DataMember]
         public string name;
 
         public Shape() { }

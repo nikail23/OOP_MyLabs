@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Drawing;
+using System.Runtime.Serialization;
 using System.Windows.Forms;
 
 namespace MyShapes
 {
     [Serializable]
+    [DataContract]
     public class Line : Shape
     {
         public Line() { }
@@ -36,7 +38,7 @@ namespace MyShapes
 
         public override void Draw(Graphics graphic)
         {
-            Pen pen = new Pen(Color.FromArgb(color), thickness);
+            var pen = new Pen(Color.FromArgb(color), thickness);
             graphic.DrawLine(pen, firstPoint, secondPoint);
         }
     }

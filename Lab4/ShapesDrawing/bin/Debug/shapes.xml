@@ -2,28 +2,80 @@
 <ArrayOfShape xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Shape xsi:type="Circle">
     <firstPoint>
-      <X>155</X>
-      <Y>244</Y>
+      <X>91</X>
+      <Y>70</Y>
     </firstPoint>
     <secondPoint>
-      <X>288</X>
-      <Y>392</Y>
+      <X>212</X>
+      <Y>163</Y>
     </secondPoint>
-    <color>-16777216</color>
-    <thickness>1</thickness>
+    <color>-16711936</color>
+    <thickness>8</thickness>
     <name>Circle</name>
   </Shape>
-  <Shape xsi:type="Circle">
+  <Shape xsi:type="Square">
     <firstPoint>
-      <X>264</X>
-      <Y>111</Y>
+      <X>291</X>
+      <Y>59</Y>
     </firstPoint>
     <secondPoint>
-      <X>433</X>
-      <Y>244</Y>
+      <X>699</X>
+      <Y>231</Y>
+    </secondPoint>
+    <color>-65536</color>
+    <thickness>3</thickness>
+    <name>Square</name>
+  </Shape>
+  <Shape xsi:type="Rectangle">
+    <firstPoint>
+      <X>70</X>
+      <Y>260</Y>
+    </firstPoint>
+    <secondPoint>
+      <X>223</X>
+      <Y>364</Y>
     </secondPoint>
     <color>-16777216</color>
     <thickness>1</thickness>
-    <name>Circle</name>
+    <name>Rectangle</name>
+  </Shape>
+  <Shape xsi:type="Triangle">
+    <firstPoint>
+      <X>334</X>
+      <Y>259</Y>
+    </firstPoint>
+    <secondPoint>
+      <X>507</X>
+      <Y>376</Y>
+    </secondPoint>
+    <color>-16777216</color>
+    <thickness>1</thickness>
+    <name>Triangle</name>
+  </Shape>
+  <Shape xsi:type="Ellipse">
+    <firstPoint>
+      <X>62</X>
+      <Y>422</Y>
+    </firstPoint>
+    <secondPoint>
+      <X>203</X>
+      <Y>545</Y>
+    </secondPoint>
+    <color>-16777216</color>
+    <thickness>1</thickness>
+    <name>Ellipse</name>
+  </Shape>
+  <Shape xsi:type="Line">
+    <firstPoint>
+      <X>275</X>
+      <Y>422</Y>
+    </firstPoint>
+    <secondPoint>
+      <X>453</X>
+      <Y>545</Y>
+    </secondPoint>
+    <color>-16760704</color>
+    <thickness>17</thickness>
+    <name>Line</name>
   </Shape>
 </ArrayOfShape>

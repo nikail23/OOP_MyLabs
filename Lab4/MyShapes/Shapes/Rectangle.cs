@@ -1,35 +1,48 @@
 ﻿using System;
 using System.Drawing;
+using System.Runtime.Serialization;
 using System.Windows.Forms;
 
 namespace MyShapes
 {
     [Serializable]
+    [DataContract]
     public class Rectangle : Shape
     {
         public Rectangle() { }
 
         public Rectangle(Point firstPoint, Point secondPoint, Color color, int thickness, String name) : base(firstPoint, secondPoint, name, color, thickness) { }
 
+        [DataMember]
         protected virtual int Width
         {
-            get { return Math.Abs(secondPoint.X - firstPoint.X); }
+            get 
+            { 
+                return Math.Abs(secondPoint.X - firstPoint.X);
+            }
+            set { }
         }
+
+        [DataMember]
         protected int Height
         {
             get
             {
                 return Math.Abs(secondPoint.Y - firstPoint.Y);
             }
+            set { }
         }
+
+        [DataMember]
         protected Point TopLeftPoint
         {
             get
             {
-                int x = Math.Min(firstPoint.X, secondPoint.X);
-                int y = Math.Min(firstPoint.Y, secondPoint.Y);
+                var x = Math.Min(firstPoint.X, secondPoint.X);
+                var y = Math.Min(firstPoint.Y, secondPoint.Y);
                 return new Point(x, y);
             }
+            set { }
         }
 
         public override void ShowShapeParameters(DataGridView parametersGrid)
@@ -58,7 +71,7 @@ namespace MyShapes
 
         public override void Draw(Graphics graphic)
         {
-            Pen pen = new Pen(Color.FromArgb(color), thickness);
+            var pen = new Pen(Color.FromArgb(color), thickness);
             graphic.DrawRectangle(pen, TopLeftPoint.X, TopLeftPoint.Y, Width, Height);
         }
     }
