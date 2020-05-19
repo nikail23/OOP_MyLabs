@@ -24,6 +24,7 @@ namespace ShapesDrawing
                     ),
                     new PluginsManager(
                         new List<Plugin>(),
+                        new List<Plugin>(),
                         new PluginScanner()
                     )
                 )

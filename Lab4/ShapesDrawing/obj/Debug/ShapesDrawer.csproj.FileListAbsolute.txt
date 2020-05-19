@@ -11,3 +11,5 @@ C:\Users\asus\Desktop\OOP_MyLabs\Lab4\ShapesDrawing\obj\Debug\ShapesDrawer.cspro
 C:\Users\asus\Desktop\OOP_MyLabs\Lab4\ShapesDrawing\obj\Debug\ShapesDrawing.exe
 C:\Users\asus\Desktop\OOP_MyLabs\Lab4\ShapesDrawing\obj\Debug\ShapesDrawing.pdb
 C:\Users\asus\Desktop\OOP_MyLabs\Lab4\ShapesDrawing\obj\Debug\ShapesDrawer.csprojAssemblyReference.cache
+C:\Users\asus\Desktop\OOP_MyLabs\Lab4\ShapesDrawing\bin\Debug\Serialization.dll
+C:\Users\asus\Desktop\OOP_MyLabs\Lab4\ShapesDrawing\bin\Debug\Serialization.pdb

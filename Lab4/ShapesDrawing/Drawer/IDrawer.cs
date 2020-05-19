@@ -15,7 +15,7 @@ namespace ShapesDrawing
         int ShapeTag { get; set; }
 
 
-        void InitializeShapePlugin(Plugin shapePlugin);
+        void InitializeHierarchyPlugin(Plugin shapePlugin);
         void DrawShapeList(IList<Shape> shapes);
         Shape CreateFigure();
     }

@@ -11,22 +11,27 @@ namespace ShapesDrawing
         private IList<Shape> deletedShapes;
         private IShapeListSerializer serializer;
         private Shape editableShape;
-        private Type[] pluginTypes;
+        private Type[] hierarchyPluginsTypes;
+        private List<IShapeListSerializer> includedSerializers;
 
         public ShapeListManager(IShapeListSerializer serializer, IList<Shape> shapes, IList<Shape> deletedShapes)
         {
             this.shapes = shapes;
             this.deletedShapes = deletedShapes;
             this.serializer = serializer;
+            includedSerializers = new List<IShapeListSerializer>();
         }
+
         public void ClearDeletedShapesList()
         {
             deletedShapes.Clear();
         }
+
         public void ClearShapesList()
         {
             shapes.Clear();
         }
+
         public void Undo()
         {
             if (shapes.Count != 0)
@@ -35,6 +40,7 @@ namespace ShapesDrawing
                 shapes.RemoveAt(shapes.Count - 1);
             }
         }
+
         public void Redo()
         {
             if (deletedShapes.Count != 0)
@@ -43,24 +49,33 @@ namespace ShapesDrawing
                 deletedShapes.RemoveAt(deletedShapes.Count - 1);
             }
         }
+
         public void Add(Shape shape)
         {
             shapes.Add(shape);
         }
+
         public void LoadList()
         {
-            if (pluginTypes != null)
-                shapes = serializer.Deserialize(pluginTypes);
+            shapes = serializer.Deserialize(hierarchyPluginsTypes);
         }
+
         public IList<Shape> GetList()
         {
             return shapes;
         }
+
+        public void SaveList(int serializerIndex)
+        {
+            var serializer = includedSerializers[serializerIndex];
+            serializer.Serialize(shapes, hierarchyPluginsTypes);
+        }
+
         public void SaveList()
         {
-            if (pluginTypes != null)
-                serializer.Serialize(shapes, pluginTypes);
+            serializer.Serialize(shapes, hierarchyPluginsTypes);
         }
+
         public void RefreshFormShapesList(ListBox shapesListBox)
         {
             shapesListBox.Items.Clear();
@@ -70,6 +85,7 @@ namespace ShapesDrawing
                     shapesListBox.Items.Add(shape.name);
             }
         }
+
         public void ShowShapeParameters(DataGridView parametersGrid, int shapeIndex)
         {
             editableShape = GetShapeByIndex(shapeIndex);
@@ -93,10 +109,24 @@ namespace ShapesDrawing
             }
         }
 
-        public void InitializePluginTypes(Type[] pluginTypes)
+        public void InitializeHierarchyPluginTypes(Type[] pluginTypes)
         {
             if (pluginTypes != null)
-                this.pluginTypes = pluginTypes;
+                hierarchyPluginsTypes = pluginTypes;
+        }
+
+        public void InitializeIncludedSerializers(List<IShapeListSerializer> serializers)
+        {
+            foreach (var serializer in serializers)
+            {
+                includedSerializers.Add(serializer);
+            }
+        }
+
+        public void LoadList(int serializerIndex)
+        {
+            var serializer = includedSerializers[serializerIndex];
+            shapes = serializer.Deserialize(hierarchyPluginsTypes);
         }
     }
 }

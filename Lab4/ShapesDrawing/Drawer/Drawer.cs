@@ -22,7 +22,7 @@ namespace ShapesDrawing
 
         private Graphics graphic;
         private IDictionary<int, Shape> shapesDictionary;
-        private List<Plugin> plugins;
+        private List<Plugin> hierarchyPlugins;
 
         public Point StartPoint { get; set; }
         public Point FinishPoint { get; set; }
@@ -37,7 +37,7 @@ namespace ShapesDrawing
             Color = DefaultColor;
             this.graphic = graphic;
             this.shapesDictionary = shapesDictionary;          
-            plugins = new List<Plugin>();
+            hierarchyPlugins = new List<Plugin>();
         }
         public void DrawShapeList(IList<Shape> shapes)
         {
@@ -59,11 +59,11 @@ namespace ShapesDrawing
             shapesDictionary.Add(EllipseTag, new Ellipse(StartPoint, FinishPoint, Color, Thickness, "Ellipse"));
             shapesDictionary.Add(LineTag, new Line(StartPoint, FinishPoint, Color, Thickness, "Line"));
 
-            if (plugins != null)
+            if (hierarchyPlugins != null)
             {
                 var shapesDictionaryIndex = LineTag + 1;
 
-                foreach (var plugin in plugins)
+                foreach (var plugin in hierarchyPlugins)
                 foreach (var type in plugin.TypesList)
                 {
                     var shape = (Shape)plugin.Assembly.CreateInstance(type.FullName, false, BindingFlags.CreateInstance, null, new object[] { StartPoint, FinishPoint, Color, Thickness, type.Name }, null, null);
@@ -83,10 +83,10 @@ namespace ShapesDrawing
             return shape;
         }
 
-        public void InitializeShapePlugin(Plugin plugin)
+        public void InitializeHierarchyPlugin(Plugin plugin)
         {
             if (plugin != null)
-                plugins.Add(plugin);
+                hierarchyPlugins.Add(plugin);
         }
     }
 }

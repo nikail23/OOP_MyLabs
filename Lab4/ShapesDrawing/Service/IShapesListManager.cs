@@ -13,9 +13,12 @@ namespace ShapesDrawing
         void Redo();
         void Undo();
         void LoadList();
+        void LoadList(int serializerIndex);
         IList<Shape> GetList();
         void SaveList();
-        void InitializePluginTypes(Type[] pluginTypes);
+        void SaveList(int serializerIndex);
+        void InitializeHierarchyPluginTypes(Type[] pluginTypes);
+        void InitializeIncludedSerializers(List<IShapeListSerializer> serializers);
         void RefreshFormShapesList(ListBox shapesListBox);
         void ShowShapeParameters(DataGridView parametersGrid, int shapeIndex);
         void ConfirmShapeParametersChange(DataGridView parametersGrid);

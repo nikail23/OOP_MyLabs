@@ -76,7 +76,6 @@
     <Compile Include="Plugins\Plugin.cs" />
     <Compile Include="Plugins\PluginScanner.cs" />
     <Compile Include="Plugins\PluginsManager.cs" />
-    <Compile Include="Serializer\ShapeListXmlSerializer.cs" />
     <Compile Include="Service\IShapesListManager.cs" />
     <Compile Include="Service\ShapeListManager.cs" />
     <Compile Include="Drawer\Drawer.cs" />
@@ -86,7 +85,6 @@
     <Compile Include="ShapeDrawingForm.Designer.cs">
       <DependentUpon>ShapeDrawingForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Serializer\IShapeListSerializer.cs" />
     <Compile Include="Drawer\IDrawer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -134,6 +132,10 @@
     <ProjectReference Include="..\MyShapes\MyShapes.csproj">
       <Project>{f10ef24e-4f4d-4019-8505-65a7d5255608}</Project>
       <Name>MyShapes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Serialization\Serialization.csproj">
+      <Project>{cf9ff8d0-d074-4c6c-9551-d25d59b89a4a}</Project>
+      <Name>Serialization</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -11,13 +11,13 @@ namespace ShapesDrawing
 {
     public class ShapeListXmlSerializer : IShapeListSerializer
     {
-        private const string Path = "shapes.xml";
+        private const string SavePath = "shapes.xml";
 
         public IList<Shape> Deserialize(Type[] types)
         {
             var formatter = new XmlSerializer(typeof(List<Shape>), types);
 
-            using (var fileStream = new FileStream(Path, FileMode.Open))
+            using (var fileStream = new FileStream(SavePath, FileMode.Open))
             {
                 return (List<Shape>)formatter.Deserialize(fileStream);
             }
@@ -27,7 +27,7 @@ namespace ShapesDrawing
         {
             var formatter = new XmlSerializer(typeof(List<Shape>), types);
 
-            using (var fileStream = new FileStream(Path, FileMode.Create))
+            using (var fileStream = new FileStream(SavePath, FileMode.Create))
             {
                 formatter.Serialize(fileStream, shapes);
             }

@@ -2,80 +2,28 @@
 <ArrayOfShape xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Shape xsi:type="Circle">
     <firstPoint>
-      <X>0</X>
-      <Y>0</Y>
+      <X>155</X>
+      <Y>244</Y>
     </firstPoint>
     <secondPoint>
-      <X>91</X>
-      <Y>151</Y>
+      <X>288</X>
+      <Y>392</Y>
     </secondPoint>
     <color>-16777216</color>
     <thickness>1</thickness>
     <name>Circle</name>
   </Shape>
-  <Shape xsi:type="Cross">
+  <Shape xsi:type="Circle">
     <firstPoint>
-      <X>182</X>
-      <Y>124</Y>
+      <X>264</X>
+      <Y>111</Y>
     </firstPoint>
     <secondPoint>
-      <X>421</X>
-      <Y>249</Y>
+      <X>433</X>
+      <Y>244</Y>
     </secondPoint>
     <color>-16777216</color>
     <thickness>1</thickness>
-    <name>Cross</name>
-  </Shape>
-  <Shape xsi:type="Cross">
-    <firstPoint>
-      <X>136</X>
-      <Y>330</Y>
-    </firstPoint>
-    <secondPoint>
-      <X>336</X>
-      <Y>427</Y>
-    </secondPoint>
-    <color>-16777216</color>
-    <thickness>1</thickness>
-    <name>Cross</name>
-  </Shape>
-  <Shape xsi:type="Cross">
-    <firstPoint>
-      <X>472</X>
-      <Y>310</Y>
-    </firstPoint>
-    <secondPoint>
-      <X>611</X>
-      <Y>411</Y>
-    </secondPoint>
-    <color>-16777216</color>
-    <thickness>1</thickness>
-    <name>Cross</name>
-  </Shape>
-  <Shape xsi:type="Cross">
-    <firstPoint>
-      <X>458</X>
-      <Y>49</Y>
-    </firstPoint>
-    <secondPoint>
-      <X>564</X>
-      <Y>148</Y>
-    </secondPoint>
-    <color>-16777216</color>
-    <thickness>1</thickness>
-    <name>Cross</name>
-  </Shape>
-  <Shape xsi:type="Cross">
-    <firstPoint>
-      <X>233</X>
-      <Y>23</Y>
-    </firstPoint>
-    <secondPoint>
-      <X>355</X>
-      <Y>75</Y>
-    </secondPoint>
-    <color>-16777216</color>
-    <thickness>1</thickness>
-    <name>Cross</name>
+    <name>Circle</name>
   </Shape>
 </ArrayOfShape>

@@ -9,11 +9,13 @@ namespace ShapesDrawing
 {
     public interface IPluginsManager
     {
-        IList<Plugin> Plugins { get; }
+        IList<Plugin> HierarchyPlugins { get; }
+        IList<Plugin> SerializerPlugins { get; }
         IPluginScanner PluginScanner { get; }
         Plugin CurrentPlugin { get; }
 
-        Type[] GetAllPluginsTypes();
-        void AddPlugin(string pluginPath, ListBox listBox);
+        Type[] GetAllHierarchyPluginsTypes();
+        bool TryAddHierarchyPlugin(string pluginPath, ListBox hierarchyListBox);
+        bool TryAddSerializerPlugin(string pluginPath, CheckedListBox checkedFunctionalListBox);
     }
 }

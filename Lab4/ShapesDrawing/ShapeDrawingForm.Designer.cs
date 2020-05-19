@@ -47,6 +47,8 @@
             this.charColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.valueColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CurrentShapesListBox = new System.Windows.Forms.ListBox();
+            this.CheckedFunctionalPluginsListBox = new System.Windows.Forms.CheckedListBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DrawingBoardPictureBox)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ColorPictureBox)).BeginInit();
@@ -67,6 +69,8 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.CheckedFunctionalPluginsListBox);
             this.panel1.Controls.Add(this.ConnectPluginButon);
             this.panel1.Controls.Add(this.ShapesTypesListBox);
             this.panel1.Controls.Add(this.DeserializeButton);
@@ -84,7 +88,7 @@
             // 
             // ConnectPluginButon
             // 
-            this.ConnectPluginButon.Location = new System.Drawing.Point(2, 475);
+            this.ConnectPluginButon.Location = new System.Drawing.Point(2, 416);
             this.ConnectPluginButon.Name = "ConnectPluginButon";
             this.ConnectPluginButon.Size = new System.Drawing.Size(103, 23);
             this.ConnectPluginButon.TabIndex = 16;
@@ -110,7 +114,7 @@
             // 
             // DeserializeButton
             // 
-            this.DeserializeButton.Location = new System.Drawing.Point(2, 446);
+            this.DeserializeButton.Location = new System.Drawing.Point(2, 396);
             this.DeserializeButton.Name = "DeserializeButton";
             this.DeserializeButton.Size = new System.Drawing.Size(103, 23);
             this.DeserializeButton.TabIndex = 13;
@@ -120,7 +124,7 @@
             // 
             // SerializeButton
             // 
-            this.SerializeButton.Location = new System.Drawing.Point(2, 417);
+            this.SerializeButton.Location = new System.Drawing.Point(2, 377);
             this.SerializeButton.Name = "SerializeButton";
             this.SerializeButton.Size = new System.Drawing.Size(103, 23);
             this.SerializeButton.TabIndex = 8;
@@ -130,7 +134,7 @@
             // 
             // RedoButton
             // 
-            this.RedoButton.Location = new System.Drawing.Point(3, 388);
+            this.RedoButton.Location = new System.Drawing.Point(3, 357);
             this.RedoButton.Name = "RedoButton";
             this.RedoButton.Size = new System.Drawing.Size(102, 23);
             this.RedoButton.TabIndex = 9;
@@ -140,7 +144,7 @@
             // 
             // ClearButton
             // 
-            this.ClearButton.Location = new System.Drawing.Point(3, 330);
+            this.ClearButton.Location = new System.Drawing.Point(3, 317);
             this.ClearButton.Name = "ClearButton";
             this.ClearButton.Size = new System.Drawing.Size(102, 23);
             this.ClearButton.TabIndex = 12;
@@ -150,7 +154,7 @@
             // 
             // UndoButton
             // 
-            this.UndoButton.Location = new System.Drawing.Point(3, 359);
+            this.UndoButton.Location = new System.Drawing.Point(3, 337);
             this.UndoButton.Name = "UndoButton";
             this.UndoButton.Size = new System.Drawing.Size(102, 23);
             this.UndoButton.TabIndex = 8;
@@ -258,6 +262,26 @@
             this.CurrentShapesListBox.TabIndex = 12;
             this.CurrentShapesListBox.SelectedIndexChanged += new System.EventHandler(this.CurrentShapesListBox_SelectedIndexChanged);
             // 
+            // CheckedFunctionalPluginsListBox
+            // 
+            this.CheckedFunctionalPluginsListBox.AllowDrop = true;
+            this.CheckedFunctionalPluginsListBox.FormattingEnabled = true;
+            this.CheckedFunctionalPluginsListBox.HorizontalScrollbar = true;
+            this.CheckedFunctionalPluginsListBox.Location = new System.Drawing.Point(3, 458);
+            this.CheckedFunctionalPluginsListBox.Name = "CheckedFunctionalPluginsListBox";
+            this.CheckedFunctionalPluginsListBox.Size = new System.Drawing.Size(102, 124);
+            this.CheckedFunctionalPluginsListBox.TabIndex = 17;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(3, 442);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(97, 9);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Подключенные функции:";
+            // 
             // ShapeDrawingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -305,6 +329,8 @@
         private System.Windows.Forms.ListBox ShapesTypesListBox;
         private System.Windows.Forms.ListBox CurrentShapesListBox;
         private System.Windows.Forms.Button ConnectPluginButon;
+        private System.Windows.Forms.CheckedListBox CheckedFunctionalPluginsListBox;
+        private System.Windows.Forms.Label label3;
     }
 }
 
