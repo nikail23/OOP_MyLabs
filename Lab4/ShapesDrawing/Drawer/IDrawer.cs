@@ -1,12 +1,10 @@
 ﻿using MyShapes;
-using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Reflection;
 
 namespace ShapesDrawing
 {
-    interface IDrawer
+    internal interface IDrawer
     {
         Point StartPoint { get; set; }
         Point FinishPoint { get; set; }

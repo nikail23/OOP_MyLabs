@@ -10,7 +10,7 @@ namespace MyShapes
     public class Circle : Ellipse
     {
         public Circle() { }
-        public Circle(Point firstPoint, Point secondPoint, Color color, int thickness, String name) : base(firstPoint, secondPoint, color, thickness, name)  { }
+        public Circle(Point firstPoint, Point secondPoint, Color color, int thickness, String name) : base(firstPoint, secondPoint, color, thickness, name) { }
 
         [DataMember]
         protected override int Width

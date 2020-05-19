@@ -75,6 +75,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Drawer\IShapesDictionaryFabrike.cs" />
+    <Compile Include="Drawer\ShapeDictionaryFabrike.cs" />
     <Compile Include="Plugins\IPluginScanner.cs" />
     <Compile Include="Plugins\IPluginsManager.cs" />
     <Compile Include="Plugins\Plugin.cs" />

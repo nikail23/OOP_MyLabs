@@ -11,7 +11,7 @@ C:\Users\asus\Desktop\OOP_MyLabs\Lab4\Serialization\bin\Debug\netstandard2.0\Acc
 C:\Users\asus\Desktop\OOP_MyLabs\Lab4\Serialization\bin\Debug\netstandard2.0\System.Deployment.dll
 C:\Users\asus\Desktop\OOP_MyLabs\Lab4\Serialization\bin\Debug\netstandard2.0\System.Runtime.Serialization.Formatters.Soap.dll
 C:\Users\asus\Desktop\OOP_MyLabs\Lab4\Serialization\bin\Debug\netstandard2.0\MyShapes.pdb
-C:\Users\asus\Desktop\OOP_MyLabs\Lab4\Serialization\obj\Debug\netstandard2.0\Serialization.csprojAssemblyReference.cache
 C:\Users\asus\Desktop\OOP_MyLabs\Lab4\Serialization\obj\Debug\netstandard2.0\Serialization.csproj.CopyComplete
 C:\Users\asus\Desktop\OOP_MyLabs\Lab4\Serialization\obj\Debug\netstandard2.0\Serialization.dll
 C:\Users\asus\Desktop\OOP_MyLabs\Lab4\Serialization\obj\Debug\netstandard2.0\Serialization.pdb
+C:\Users\asus\Desktop\OOP_MyLabs\Lab4\Serialization\obj\Debug\netstandard2.0\Serialization.csprojAssemblyReference.cache

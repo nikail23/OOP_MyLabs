@@ -11,13 +11,13 @@ namespace MyShapes
     {
         public Rectangle() { }
 
-        public Rectangle(Point firstPoint, Point secondPoint, Color color, int thickness, String name) : base(firstPoint, secondPoint, name, color, thickness) { }
+        public Rectangle(Point firstPoint, Point secondPoint, Color color, int thickness, string name) : base(firstPoint, secondPoint, name, color, thickness) { }
 
         [DataMember]
         protected virtual int Width
         {
-            get 
-            { 
+            get
+            {
                 return Math.Abs(secondPoint.X - firstPoint.X);
             }
             set { }

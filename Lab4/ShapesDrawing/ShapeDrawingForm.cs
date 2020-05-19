@@ -92,8 +92,6 @@ namespace ShapesDrawing
             return false;
         }
 
-
-
         private void SerializeButton_Click(object sender, EventArgs e)
         {
             if (CheckFunctionalPluginsListBox())
